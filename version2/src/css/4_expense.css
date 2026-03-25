@@ -1,0 +1,202 @@
+.expenses-section{
+    max-width: var(--container);
+    margin: auto;
+    margin-top: 35px;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+}
+
+.campaign-progress-container{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.92));
+    border-radius:var(--radius);
+    padding: 16px 28px;
+    margin-bottom:28px;
+    box-shadow: 0 18px 48px rgba(15, 15, 15, 0.05);
+}
+
+.campaign-title{
+    font-family: "Playfair Display", serif;
+    font-size: 34px;
+    margin: 0 0 10px 0;
+    letter-spacing: -0.02em;
+    color: #0B1220;
+}
+
+.campaign-amount{
+    font-size:22px;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+.campaign-bar{
+    width:100%;
+    height:12px;
+    background:#e8edf3;
+    border-radius:8px;
+    overflow:hidden;
+}
+
+.campaign-fill{
+    height:100%;
+    width:0%;
+    background:linear-gradient(90deg,#22c55e,#16a34a);
+    transition:width 1s ease;
+}
+
+.campaign-percent{
+    margin-top:8px;
+    font-size:13px;
+    color:var(--muted);
+}
+
+.expenses-detailed-container{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 16px;
+}
+
+.expense-card{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.92));
+    border-radius: var(--radius);
+    padding: 18px 28px;
+    min-width:220px;
+    box-shadow: 0 18px 48px rgba(15, 15, 15, 0.05);
+}
+
+.expense-card h3{
+    margin: 0 0 12px;
+    font-size: 18px
+}
+
+.expense-amout{
+    font-weight: 600;
+    font-size: 15px;
+    color: black;
+}
+
+.expense-text-detail{
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.expense-progress-bar{
+    width:100%;
+    height:8px;
+    background:#e8edf3;
+    border-radius:6px;
+    overflow:hidden;
+    margin-top:6px;
+}
+
+.expense-progress-fill{
+    height:100%;
+    width:0%;
+    background:linear-gradient(90deg,#3b82f6,#2563eb);
+    transition:width 0.8s ease;
+}
+
+.divider{
+    margin:0 4px;
+    opacity:.6;
+}
+
+.expense-buttons-container{
+    margin-top: 18px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+@media (max-width: 1150px){
+    .expenses-section{
+        padding: 0 24px;
+    }
+}
+
+@media (max-width: 1024px){
+    .expenses-section{
+        padding: 0 20px;
+    }
+
+    .campaign-title{
+        font-size: 30px;
+    }
+
+    .expenses-detailed-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .expense-card.featured{
+        grid-column: span 2;
+    }
+
+}
+
+@media (max-width: 640px){
+
+    .expenses-section{
+        margin-top:20px;
+        padding: 0 14px;
+    }
+
+    /* HEADER */
+    .campaign-progress-container{
+        padding:18px;
+        border-radius:18px;
+    }
+
+    .campaign-title{
+        font-size:26px;
+        margin-bottom:12px;
+    }
+
+    .campaign-amount{
+        font-size:18px;
+    }
+
+    .campaign-bar{
+        height:10px;
+    }
+
+    /* GRID */
+    .expenses-detailed-container{
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    /* REMOVE destaque pesado */
+    .expense-card.featured{
+        grid-column: span 1;
+    }
+
+    /* CARDS */
+    .expense-card{
+        padding:16px;
+        border-radius:16px;
+    }
+
+    .expense-card h3{
+        font-size:16px;
+    }
+
+    .expense-amout{
+        font-size:14px;
+    }
+
+    /* BOTÕES estilo Apple */
+    .expense-buttons-container{
+        flex-direction: column;
+        gap:10px;
+        margin-top:20px;
+    }
+
+    .expense-buttons-container a{
+        width:100%;
+        text-align:center;
+        padding:14px;
+    }
+}
+
+
