@@ -1,0 +1,158 @@
+/* Estilos específicos da página "Minha História" */
+
+.history-hero {
+  padding: 32px 0 18px;
+}
+
+.history-hero .hero-card {
+  text-align: center;
+  position: relative;
+}
+
+.history-hero .hero-title {
+  font-size: 32px;
+}
+
+.history-hero .hero-sub {
+  font-size: 15px;
+}
+
+/* Countdown principal maior e centralizado */
+.countdown-main {
+  margin: 22px auto 10px;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.countdown-main .count-block {
+  text-align: center;
+}
+
+.countdown-main .numbers {
+  font-size: 52px;
+  font-weight: 800;
+  color: var(--blue-dark);
+}
+
+.countdown-main .label {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/* Centralizar CTAs do topo */
+.buttons-center {
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.buttons-center .pill {
+  font-size: 13px;
+}
+
+
+/* Placeholders de imagem */
+.image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+  margin: 14px 0 20px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, rgba(0,0,0,0.03), rgba(0,0,0,0.02));
+  border: 1px dashed rgba(0,0,0,0.06);
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+  padding: 0 12px;
+}
+
+/* Timeline de conquistas */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 14px;
+}
+
+.timeline-item .pill {
+  flex-shrink: 0;
+}
+
+/* Ações de contato / apoio */
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.pix-line {
+  margin-top: 10px;
+}
+
+.story-image {
+  width: 100%;
+  margin: 24px 0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+.story-image img {
+  width: 50%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 26px;
+  align-items: start;
+}
+
+@media (max-width: 980px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Responsividade */
+@media (max-width: 760px) {
+  .history-hero {
+    padding-top: 24px;
+  }
+
+  .history-hero .hero-title {
+    font-size: 26px;
+  }
+
+  .countdown-main {
+    gap: 20px;
+  }
+
+  .countdown-main .numbers {
+    font-size: 42px;
+  }
+
+  .image-placeholder {
+    height: 170px;
+  }
+
+  .contact-actions {
+    flex-direction: column;
+  }
+
+  .hide-on-small {
+    display: none;
+  }
+}

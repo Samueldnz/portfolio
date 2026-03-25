@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Básico -->
+    <title>#SamucaSemFronteiras — Intercâmbio Europa 2026 • Samuel Sampaio</title>
+
+    <meta name="description" content="Acompanhe a jornada #SamucaSemFronteiras rumo ao intercâmbio acadêmico na Europa em 2026, passando pela Technical University of Liberec e CUOA University. Conheça a história, os gastos previstos, a rifa solidária e saiba como contribuir para transformar esse sonho em realidade.">
+
+    <meta name="keywords" content="intercâmbio, Europa 2026, Samuel Sampaio, Liberec, CUOA University, estudo no exterior, rifa solidária, vaquinha, doação, viagem, pesquisa, ciência da computação, #SamucaSemFronteiras">
+
+    <meta name="author" content="Samuel Sampaio Diniz">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:title" content="#SamucaSemFronteiras — Intercâmbio Europa 2026">
+    <meta property="og:description" content="Participe e acompanhe a jornada do Samuel rumo ao intercâmbio acadêmico na Europa. Saiba como contribuir e ver transparência total sobre gastos e comprovantes.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://samuelsampaio.wwotec.com">
+    <meta property="og:image" content="https://samuelsampaio.wwotec.com/src/midia/europa.jpg">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="#SamucaSemFronteiras — Intercâmbio Europa 2026">
+    <meta name="twitter:description" content="Apoie a jornada do Samuel no intercâmbio Europa 2026. Conheça a história e veja como contribuir.">
+    <meta name="twitter:image" content="https://samuelsampaio.wwotec.com/src/midia/europa.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="src/midia/avatar-samuel-semfundo.ico">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://samuelsampaio.wwotec.com">
+
+
+    <link rel="stylesheet" href="src/css/0_root.css">
+    <link rel="stylesheet" href="src/css/1_nav.css">
+    <link rel="stylesheet" href="src/css/2_header.css">
+    <link rel="stylesheet" href="src/css/3_sobre.css">
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    >
+  </head>
+
+  <body>
+    <nav>
+      <div class="container nav-inner">
+        <div class="brand">
+          <div id="logo">
+            <a href="index.html">
+              <img src="src/midia/avatar-samuel-semfundo.png" alt="Avatar Samuel">
+            </a>
+          </div>
+          <div>
+            <h1>Samuca — Europa 2026</h1>
+            <div style="font-size:12px; color:var(--muted)">Intercâmbio Acadêmico</div>
+          </div>
+        </div>
+
+        <div class="nav-links" role="navigation" aria-label="Menu principal">
+          <div><a class="navItem" href="#inicio">Início</a></div>
+          <div><a class="navItem" href="#sobre">Sobre</a></div>
+          <div><a class="navItem" href="#gastos">Gastos</a></div>
+          <div><a class="navItem" href="#rifa">Rifa</a></div>
+          <div><a class="navItem" href="#contato">Contato</a></div>
+          <div>
+            <a
+              class="cta-btn navItem"
+              id="donateTop"
+              href="https://vakinha.bio/5793881"
+              target="_blank"
+              rel="noopener"
+            >
+              Contribuir Agora
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header id="inicio" class="hero container">
+      <div class="hero-grid">
+        <div class="hero-card reveal" style="--delay:0ms">
+          <div class="flag-overlay" aria-hidden="true"></div>
+
+          <h2 class="hero-title">Uma jornada ao futuro!</h2>
+          <p class="hero-sub">
+            Seja Bem-Vindo! Sou Samuel, tenho 23 anos, e quero te convidar a fazer parte do meu sonho e a ajudar a transformá-lo em realidade. 
+            Em abril de 2026, iniciarei um intercâmbio na Europa, começando pela Technical University of Liberec, na República Tcheca, e concluindo na CUOA University, na Itália. 
+            Será uma jornada única de aprendizado, crescimento profissional e desenvolvimento pessoal. 
+            Acompanhe essa história e cada passo dessa conquista pelo meu Instagram: 
+            <a class="instagram" href="https://www.instagram.com/sammsampaio/" target="_blank">
+              <strong>@sammsampaio</strong>
+            </a>
+          </p>
+
+          <div class="hero-meta" style="margin-bottom:18px">
+            <div class="profile" role="group" aria-label="perfil">
+              <div class="avatar" aria-hidden="true">
+                <img src="src/midia/samuel-profile.jpg" alt="Foto de Samuel">
+              </div>
+              <div>
+                <h3>Samuel Sampaio Diniz</h3>
+                <p>Estudante de Ciência da Computação e apaixonado por empreendedorismo e inovação.</p>
+              </div>
+            </div>
+
+            <div class="countdown" style="margin-left:6px">
+              <div>
+                <div style="font-size:12px;color:var(--muted)">Partida em</div>
+                <div id="countdownTop" style="display:flex; gap:8px;margin-top:8px;">
+                  <div style="text-align:center;">
+                    <div class="numbers" id="days">--</div>
+                    <div class="label">dias</div>
+                  </div>
+                  <div style="text-align:center;">
+                    <div class="numbers" id="hours">--</div>
+                    <div class="label">hrs</div>
+                  </div>
+                  <div style="text-align:center;">
+                    <div class="numbers" id="minutes">--</div>
+                    <div class="label">min</div>
+                  </div>
+                  <div style="text-align:center;">
+                    <div class="numbers" id="seconds">--</div>
+                    <div class="label">seg</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="buttonsCTA">
+            <a
+              class="cta-btn"
+              href="https://vakinha.bio/5793881"
+              id="donateHero"
+              target="_blank"
+              rel="noopener"
+            >
+              Apoie meu sonho
+            </a>
+            <a class="btn btn-outline" href="aboutme.html" id="openStory">Conheça minha história</a>
+            <span class="pill">Meta: R$ 90.000</span>
+          </div>
+        </div>
+
+        <div class="hero-right reveal" style="--delay:80ms">
+          <div class="photo flip-photo">
+            <div class="flip-photo-inner">
+              <div class="flip-front">
+                <img src="src/midia/samuel.jpg" alt="Itália - paisagem">
+              </div>
+              <div class="flip-back">
+                <img src="src/midia/avatar-samuel.png" alt="Itália - paisagem alternativa">
+              </div>
+            </div>
+            <div class="overlay">
+              <div>
+                <div class="minor">Pesquisa & Curso</div>
+                <div style="font-weight:800;">#SamucaSemFronteiras</div>
+                <div class="minor" style="font-size:13px">Abril 2026 • Julho 2026</div>
+              </div>
+              <div style="width:12px"></div>
+              <a
+                style="text-align: center;"
+                class="cta-btn"
+                href="https://vakinha.bio/5793881"
+                target="_blank"
+                rel="noopener"
+              >
+                Doar agora
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+    </header>
+
+    <!-- ABOUT / STORY -->
+    <section id="sobre" class="container reveal">
+      <div class="section-title">
+        <h2 class="hero-title">Sobre o intercâmbio</h2>
+        <h4 class="section-sub">#SamucaSemFronteiras</h4>
+      </div>
+
+      <div class="about-grid">
+        
+        <div class="story-card">
+          <h3>Technical University of Liberec (TUL)</h3>
+          <p class="muted">
+            Participarei da pesquisa <em>"Create a User Touchscreen Interface for a Prototype Device"</em> na <strong>Technical University of Liberec</strong>. 
+            O foco do estudo inclui prototipagem, testes com usuários,design de interfaces touchscreen e avaliação de usabilidade em contextos reais. 
+            Além disso, o projeto busca aumentar o nível de automação e implementar o controle de dispositivos por meio de uma interface gráfica diretamente no próprio equipamento — uma proposta que representa uma imersão fascinante no universo da nanotecnologia e da mecatrônica. 
+            O objetivo é contribuir com dados relevantes para o projeto e desenvolver habilidades práticas em engenharia de interfaces.
+          </p>
+
+
+          <hr style="margin:16px 0; border:none; border-top:1px solid rgba(10,10,10,0.04)">
+
+          <h3>CUOA Business School (Itália)</h3>
+          <p class="muted">Ao final da pesquisa na República Tcheca, seguirei para a <strong>CUOA University</strong> para o curso <em>Business Strategy and Marketing Management</em>. O curso visa capacitar os alunos nas melhores práticas da cultura empresarial europeia, proporcionando aprendizado direto com executivos de destaque, professores PhD e especialistas reconhecidos na área.</p>
+
+          <hr style="margin:16px 0; border:none; border-top:1px solid rgba(10,10,10,0.04)">
+
+          <h4 style="margin:0 0 8px 0;">O que vou aprender?</h4>
+          <ul style="margin:0 0 12px 18px; color:var(--muted)">
+            <li class="moduleItem"><strong>Pesquisa (Liberec):</strong> prototipagem de UI touchscreen, testes com usuários, coleta e análise de dados de usabilidade.</li>
+            <li class="moduleItem"><strong>Curso (CUOA):</strong> Business Strategy, Marketing Management, gestão de projetos e técnicas de apresentação para mercados internacionais.</li>
+          </ul>
+
+          <div style="display:flex;gap:12px;align-items:center">
+            <a class="cta-btn" href="https://vakinha.bio/5793881" target="_blank" rel="noopener">Contribua</a>
+            <a class="btn btn-outline" href="#gastos" id="seeExpenses">Ver gastos previstos</a>
+          </div>
+
+        </div>
+
+        <aside>
+
+          <div class="card" style="margin-bottom:16px">
+            <h3>Itinerário / Timeline</h3>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div>
+                <strong>Liberec — Technical University of Liberec</strong>
+                <div class="muted">Abril 2026 • Pesquisa: Create a User Touchscreen Interface for a Prototype Device</div>
+              </div>
+              <div>
+                <strong>Itália — CUOA University</strong>
+                <div class="muted">Julho 2026 • Curso: Business Strategy and Marketing Management</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-bottom:16px">
+            <h3>Meta de apoio</h3>
+            <div class="amount">R$ 90.000</div>
+            <div class="muted" style="margin-top:8px">
+              Inclui passagem, curso, hospedagem, alimentação e seguro.
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Onde acompanhar comprovantes</h3>
+            <p class="muted">
+              Transparência total — os comprovantes (passagem, matrícula, recibos)
+              estarão disponíveis em uma pasta pública do Google Drive.
+            </p>
+            <div style="margin-top:12px">
+              <a
+                class="btn btn-outline"
+                href="https://drive.google.com/drive/folders/1rrQOnqVwlFWdx9gQ7lChGkUz9VSky0QX?usp=sharing"
+                target="_blank"
+                rel="noopener"
+              >
+                Ver comprovantes
+              </a>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+
+    </section>
+
+    <!-- GASTOS -->
+<section id="gastos" class="container reveal">
+
+  <div class="section-title">
+    <h2 class="hero-title">Gastos previstos</h2>
+    <h4 class="section-sub">#SamucaSemFronteiras</h4>
+  </div>
+
+  <!-- PROGRESSO GERAL -->
+  <div class="campaign-progress">
+    <div class="campaign-amount">
+      <span id="campaignPaid"></span>
+      <span class="divider">/</span>
+      <span id="campaignTotal"></span>
+    </div>
+
+    <div class="campaign-bar">
+      <div class="campaign-fill"></div>
+    </div>
+
+    <div class="campaign-percent" id="campaignPercent"></div>
+  </div>
+
+
+  <div class="expenses">
+
+    <div class="card" data-paid="5000" data-total="18400">
+      <h3>Passagem aérea</h3>
+
+      <div class="amount">
+        <span class="paid"></span>
+        <span class="divider">/</span>
+        <span class="total"></span>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+
+      <div class="receipts">Estimado</div>
+    </div>
+
+
+    <div class="card" data-paid="2000" data-total="8890">
+      <h3>Pesquisa / Matrícula (Liberec)</h3>
+
+      <div class="amount">
+        <span class="paid"></span>
+        <span class="divider">/</span>
+        <span class="total"></span>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+
+      <div class="receipts">Estimado</div>
+    </div>
+
+
+    <div class="card" data-paid="12050" data-total="12050">
+      <h3>Curso / Matrícula (CUOA)</h3>
+
+      <div class="amount">
+        <span class="paid"></span>
+        <span class="divider">/</span>
+        <span class="total"></span>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+
+      <div class="receipts">Comprovante: em PDF</div>
+    </div>
+
+
+    <div class="card" data-paid="0" data-total="20000">
+      <h3>Hospedagem</h3>
+
+      <div class="amount">
+        <span class="paid"></span>
+        <span class="divider">/</span>
+        <span class="total"></span>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+
+      <div class="receipts">Estimado</div>
+    </div>
+
+
+    <div class="card" data-paid="0" data-total="20000">
+      <h3>Alimentação & Transporte</h3>
+
+      <div class="amount">
+        <span class="paid"></span>
+        <span class="divider">/</span>
+        <span class="total"></span>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+
+      <div class="receipts">Estimado</div>
+    </div>
+
+
+    <div class="card" data-paid="0" data-total="8500">
+      <h3>Seguro e taxas</h3>
+
+      <div class="amount">
+        <span class="paid"></span>
+        <span class="divider">/</span>
+        <span class="total"></span>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+
+      <div class="receipts">Estimado</div>
+    </div>
+
+  </div>
+
+
+  <div style="margin-top:18px; display:flex; gap:12px; align-items:center">
+    <a class="cta-btn" href="https://vakinha.bio/5793881" target="_blank" rel="noopener">Apoiar agora</a>
+
+    <a
+      class="btn btn-outline"
+      href="https://drive.google.com/drive/folders/1rrQOnqVwlFWdx9gQ7lChGkUz9VSky0QX?usp=drive_link"
+      target="_blank"
+      id="openReceipts"
+    >
+      Ver comprovantes
+    </a>
+  </div>
+
+</section>
+
+    <!-- RAFFLE / RIFA -->
+    <section id="rifa" class="container reveal">
+      <div class="section-title">
+        <h2 class="hero-title">Participe da rifa</h2>
+        <div class="section-sub">
+          Ajude e concorra a prêmios — cada número aproxima a meta
+        </div>
+      </div>
+
+      <div class="raffle">
+        <div class="left">
+          <h3>Rifa solidária</h3>
+          <div class="muted">
+            Para participar da rifa é muito simples! Basta clicar no botão ao lado
+            (<em>Participar da rifa</em>), escolher seu(s) número(s) e me enviar pelo
+            WhatsApp
+            <a class="instagram"  href="https://wa.me/5521951111863?text=Olá%20Samuel!%20Quero%20particular%20da%20rifa%20do%20intercâmbio.%20Pode%20me%20enviar%20as%20informações?" target="_blank">
+              <strong>21 95111-1863</strong>
+            </a>
+            junto com o comprovante de pagamento.
+            <br><br>
+            Se você puder ou quiser contribuir doando algum prêmio para a rifa
+            solidária, entre em contato comigo — ficarei imensamente feliz com sua ajuda.
+            <br><br>
+            <strong>Que Deus lhe recompense!</strong>
+            <span class="section-sub">
+              Obs.: Todo o valor arrecadado será destinado à meta do intercâmbio.
+            </span>
+          </div>
+        </div>
+        <div>
+          <a
+              class="cta-btn"
+              href="https://wa.me/5521951111863?text=Olá%20Samuel!%20Quero%20particular%20da%20rifa%20do%20intercâmbio.%20Pode%20me%20enviar%20as%20informações?"
+              target="_blank"
+              rel="noopener"
+            >
+              Participar da rifa
+            </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contato" class="container">
+      <div class="foot-inner">
+        <div>
+          <p style="font-weight:700">Samuca — Europa 2026</p>
+          <p class="muted">
+            Cada sonho começa com um passo. Eu dei o primeiro, agora preciso da sua ajuda
+            para dar os próximos. Obrigado por fazer parte dessa jornada!
+          </p>
+        </div>
+        <div style="display:flex; gap:14px; align-items:center">
+          <a class="instagram" href="https://www.instagram.com/sammsampaio/" target="_blank">Instagram</a>
+          <a class="instagram" href="https://wa.me/5521951111863" target="_blank">WhatsApp</a>
+          <a class="instagram" style="cursor: none;">samueldnz03@gmail.com</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="src/js/main.js"></script>
+  </body>
+</html>

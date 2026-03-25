@@ -1,0 +1,109 @@
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.6));
+  border-bottom: 1px solid rgba(16,24,40,0.04);
+  box-shadow: 0 6px 18px rgba(15, 15, 15, 0.03);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#logo img {
+  height: 64px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background-image: url("https://flagcdn.com/w20/eu.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+}
+
+#logo img:hover {
+  transform: scale(1.05);
+}
+
+.brand h1 {
+  font-size: 16px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navItem {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navItem::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-cyan);
+  transition: width 0.3s ease;
+}
+
+.navItem:hover {
+  color: var(--accent-blue);
+}
+
+.navItem:hover::after {
+  width: 100%;
+}
+
+.cta-btn {
+  background: var(--accent-cyan);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease;
+  box-shadow: 0 8px 20px rgba(192,57,43,0.14);
+  position: relative;
+}
+
+.cta-btn::after {
+  display: none;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  background: var(--blue-dark);
+  color: white;
+  box-shadow: 0 12px 30px rgba(0,128,0,0.18);
+}
+
+@media (max-width: 880px) {
+  .nav-links {
+    display: none;
+  }
+}

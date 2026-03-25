@@ -1,0 +1,221 @@
+/* About / Story layout */
+    .about-grid{
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:26px;
+      align-items:start;
+    }
+    
+    @media (max-width:980px){
+      .about-grid{grid-template-columns:1fr}
+    }
+
+    .story-card{
+      background:var(--paper);
+      border-radius:12px;
+      padding:20px;
+      box-shadow: 0 14px 40px rgba(10,10,10,0.04);
+      color:#111827;
+    }
+
+    .story-card p{color:var(--muted)}
+
+   /* Expenses */
+    .expenses{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      align-items:stretch;
+    }
+
+    .card{
+      background:var(--paper);
+      border-radius:12px;
+      padding:16px;
+      flex:1 1 220px;
+      min-width:220px;
+      box-shadow: 0 8px 26px rgba(10,10,10,0.04);
+    }
+
+    .card h3{margin:0 0 6px 0; font-size:15px}
+    .amount{font-weight:800; font-size:18px; color:#0B1220}
+
+    .receipts{
+      margin-top:12px;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+/* RAFFLE SECTION */
+.raffle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, rgba(30,132,73,0.06), rgba(192,57,43,0.03));
+  padding: 28px 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+  transition: all 0.3s ease;
+}
+
+/* Text block */
+.raffle .left {
+  flex: 1 1 360px;
+  color: var(--text, #333);
+}
+
+.raffle h3 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+  color: var(--accent-cyan);
+}
+
+.raffle .muted {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--muted, #555);
+}
+
+.raffle .muted em {
+  color: var(--accent-cyan);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.raffle strong {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+.raffle .section-sub {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: var(--muted, #666);
+  font-style: italic;
+}
+
+/* Button block */
+.raffle .btn {
+  flex-shrink: 0;
+  padding: 12px 22px;
+  font-size: 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.raffle .btn:hover {
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .section-title{
+    flex-wrap: wrap;
+  }
+
+  .raffle {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    padding: 22px 18px;
+  }
+
+  .raffle .left {
+    flex: 1 1 100%;
+  }
+
+  .raffle h3 {
+    font-size: 1.25rem;
+  }
+
+  .raffle .btn {
+    width: 100%;
+    font-size: 1.05rem;
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .raffle {
+    gap: 18px;
+    padding: 18px;
+  }
+
+  .raffle .muted {
+    font-size: 0.9rem;
+  }
+
+  .raffle .btn {
+    padding: 12px;
+  }
+}
+
+/* PROGRESSO GERAL */
+
+.campaign-progress{
+  background:var(--paper);
+  border-radius:14px;
+  padding:20px;
+  margin-bottom:28px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.06);
+}
+
+.campaign-amount{
+  font-size:22px;
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+.campaign-bar{
+  width:100%;
+  height:12px;
+  background:#e8edf3;
+  border-radius:8px;
+  overflow:hidden;
+}
+
+.campaign-fill{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,#22c55e,#16a34a);
+  transition:width 1s ease;
+}
+
+.campaign-percent{
+  margin-top:8px;
+  font-size:13px;
+  color:var(--muted);
+}
+
+
+
+/* BARRAS DOS CARDS */
+
+.progress-bar{
+  width:100%;
+  height:8px;
+  background:#edf1f5;
+  border-radius:6px;
+  overflow:hidden;
+  margin-top:6px;
+}
+
+.progress-fill{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,#3b82f6,#2563eb);
+  transition:width 0.8s ease;
+}
+
+.divider{
+  margin:0 4px;
+  opacity:.6;
+}

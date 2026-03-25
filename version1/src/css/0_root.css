@@ -1,0 +1,193 @@
+
+    :root {
+  --bg: #f5f9ff;                /* Base fria e suave - equivalente ao #fff8ef */
+  --paper: #ffffff;             /* Superfícies claras */
+  --muted-light: #6b7b8c;             /* Texto secundário - substitui o #667085 */
+  --muted: #445066;        /* Versão mais escura - substitui o #454a55 */
+
+  --accent-blue: #1E6FD9;       /* Azul principal (equivalente ao vermelho Itália) */
+  --accent-cyan: #009fb7;       /* Ciano vibrante (equivalente ao verde Itália) */
+  --blue-dark: #154f8a;         /* Azul profundo (equivalente ao green-dark) */
+
+  --flag-shadow: rgba(0, 40, 90, 0.06);  /* Sombra azulada sutil */
+  --glass: rgba(255, 255, 255, 0.65);    /* Transparência semelhante, com leve ajuste */
+  --radius: 14px;
+  --transition: 280ms cubic-bezier(.2, .9, .3, 1);
+  --container: 1100px;
+}
+
+
+    /* Reset & base */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--bg);
+      /* background: black; */
+      color:#111827;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .container{
+      width: min(92%, var(--container));
+      margin: 0 auto;
+    }
+
+
+    /* small helpers */
+    .muted{color:var(--muted)}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(0,0,0,0.03);font-weight:700}
+
+    /* Modal */
+    .modal-backdrop{
+      position:fixed;
+      inset:0;
+      background:rgba(8,16,24,0.4);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      z-index:120;
+      padding:20px;
+    }
+
+    .modal{
+      width:100%;
+      max-width:920px;
+      background:var(--paper);
+      border-radius:14px;
+      padding:18px;
+      box-shadow:0 30px 80px rgba(10,10,10,0.4);
+    }
+    .modal .close{float:right; cursor:pointer; font-weight:700; color:var(--muted)}
+
+
+    .btn{
+      display:inline-block;
+      text-decoration:none;
+      padding:10px 14px;
+      border-radius:10px;
+      font-weight:700;
+      transition: all var(--transition);
+    }
+    .btn-outline{
+      border: 2px solid var(--accent-blue);
+      color:var(--accent-blue);
+      background: transparent;
+    }
+    .btn-outline:hover{background:var(--accent-blue); color:#fff}
+
+    .btn-primary{
+      background:var(--accent-blue);
+      color:#fff;
+    }
+
+    /* SECTIONS */
+    section{
+      padding: 46px 0;
+    }
+
+    .section-title{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:18px;
+    }
+    /* .section-title h2{margin:0; font-family:"Playfair Display", serif; font-size:22px} */
+    .section-sub{color:var(--muted); font-size:14px}
+
+    /* Footer */
+footer {
+  padding: 32px 0;
+  margin-top: 48px;
+  border-top: 1px solid rgba(16, 24, 40, 0.08);
+}
+
+footer .foot-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+footer p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 520px;
+}
+
+footer p:first-child {
+  font-weight: 700;
+  color: var(--text);
+}
+
+footer .foot-inner > div:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+footer a.instagram {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+  word-break: break-word;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  footer .foot-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  footer .foot-inner > div:last-child {
+    justify-content: flex-start;
+  }
+
+  footer a.instagram {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 24px 0;
+  }
+
+  footer .foot-inner {
+    gap: 18px;
+  }
+
+  footer p {
+    font-size: 0.95rem;
+  }
+
+  footer a.instagram {
+    display: block;
+  }
+}
+
+.countdown-main {
+  position: relative;
+  display: inline-flex;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  margin-top: 14px;
+}
