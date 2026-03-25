@@ -1,0 +1,161 @@
+.monthly-expenses{
+    max-width: var(--container);
+    margin: auto;
+    margin-top: 50px;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+}
+
+.monthly-expenses-container{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.92));
+    border-radius:var(--radius);
+    padding: 16px 28px;
+    margin-bottom:28px;
+    box-shadow: 0 18px 48px rgba(15, 15, 15, 0.05);
+}
+
+.monthly-expenses-title{
+    font-family: "Playfair Display", serif;
+    font-size: 34px;
+    margin: 0 0 10px 0;
+    letter-spacing: -0.02em;
+    color: #0B1220;
+}
+
+.tabs-monthly-container{
+    display: flex;
+    gap: 24px;
+    position: relative;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 10px;
+}
+
+.tab-monthly{
+    background: none;
+    border: none;
+    font-size: 15px;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 6px 0;
+    transition: all 0.25s ease;
+}
+
+.tab-monthly.active{
+    color: #111;
+    font-weight: 500;
+}
+
+.tab-monthly-indicator{
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: #111;
+    border-radius: 999px;
+    transition: all 0.3s ease;
+}
+
+.month-summary-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.month-summary-label{
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.month-summary-total{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.tab-content-container{
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.tab-content-container.active{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    animation: fadeIn 0.4s ease forwards;
+}
+
+.expense-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 18px;
+    border-radius: 14px;
+
+    backdrop-filter: blur(10px);
+
+    transition: all 0.25s ease;
+}
+
+.expense-left{
+    display: flex;
+    flex-direction: column;
+}
+
+.expense-title{
+    font-size: 15px;
+    font-weight: 500;
+    color: #111;
+}
+
+.expense-sub{
+    font-size: 13px;
+    color: #9ca3af;
+    margin-top: 2px;
+}
+
+.expense-right{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.expense-value{
+    font-size: 15px;
+    font-weight: 600;
+    color: #111;
+}
+
+
+.expense-status{
+    font-size: 16px;
+}
+
+.expense-item.paid .expense-status{
+    color: #22c55e; /* verde */
+}
+
+.expense-item.pending .expense-status{
+    color: #f59e0b; /* amarelo */
+}
+
+
+@keyframes fadeIn{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 768px){
+    .tabs-monthly-container{
+        overflow-x: auto;
+    }
+}
+
+@media (min-width: 1024px){
+    .expense-item:hover{
+        transform: translateY(-2px);
+    }
+}
