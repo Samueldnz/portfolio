@@ -34,12 +34,13 @@
     <link rel="canonical" href="https://samuelsampaio.wwotec.com">
 
 
-    <link rel="stylesheet" href="./src/css/0_root.css">
-    <link rel="stylesheet" href="./src/css/1_nav.css">
-    <link rel="stylesheet" href="./src/css/2_header.css">
-    <link rel="stylesheet" href="./src/css/3_sobre.css">
-    <link rel="stylesheet" href="./src/css/4_expense.css">
-    <link rel="stylesheet" href="./src/css/5_footer.css">
+    <link rel="stylesheet" href="src/css/0_root.css">
+    <link rel="stylesheet" href="src/css/1_nav.css">
+    <link rel="stylesheet" href="src/css/2_header.css">
+    <link rel="stylesheet" href="src/css/3_sobre.css">
+    <link rel="stylesheet" href="src/css/4_expense.css">
+    <link rel="stylesheet" href="src/css/5_footer.css">
+    <link rel="stylesheet" href="src/css/6_bank.css">
     
 
     <!-- Fonts -->
@@ -133,8 +134,8 @@
                 <div class="hero-container-CTA">
                     <a class="cta-btn" href="https://vakinha.bio/5793881" id="hero-button-CTA" target="_blank" rel="noopener">Apoie meu sonho</a>
 
-                    <a class="btn btn-outline" href="aboutme.html" id="hero-button-aboutme">Conheça minha história</a>
-                    <span class="pill">Meta: R$ 90.000</span>
+                    <!-- <a class="btn btn-outline" href="aboutme.html" id="hero-button-aboutme">Conheça minha história</a> -->
+                    <span class="pill">Meta: R$ 7s0.000</span>
                 </div>
             </div>
 
@@ -257,7 +258,7 @@
                 </div>
 
                 <!-- Cards normais -->
-                <div class="expense-card" data-paid="4030" data-total="9100">
+                <div class="expense-card featured" data-paid="4030" data-total="9100">
                     <h3>Pesquisa / Matrícula (Liberec)</h3>
                     <div class="expense-amout">
                         <span class="expense-paid"></span>
@@ -270,7 +271,7 @@
                 </div>
 
                 <!-- Destaque secundário -->
-                <div class="expense-card featured" data-paid="1668.12" data-total="10971.24">
+                <div class="expense-card" data-paid="1668.12" data-total="10971.24">
                     <h3>Passagem Aérea</h3>
 
                     <div class="expense-amout">
@@ -331,6 +332,33 @@
             </div>
  
         </div>
+    </section>
+
+    <section class="monthly-expenses">
+
+        <div class="monthly-expenses-container">
+            
+            <h2 class="monthly-expenses-title">Extrato mensal</h2>
+            
+            <div class="tabs-monthly-container">
+                <!-- JS -->
+                <div class="tab-monthly-indicator"></div>
+            </div>
+
+            <div class="month-summary-container">
+                <span class="month-summary-label">
+                    <!-- preencher de acordo com o mês selecionado JS -->
+                </span>
+                <span class="month-summary-total">
+                    <!-- preencher com total de gastos do mês JS -->
+                </span>
+            </div>
+
+            <!-- Conteúdo -->
+            <div class="monthly-content"></div>
+               
+        </div>
+    
     </section>
 
     <footer id="contato" class="footer-section">

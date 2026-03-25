@@ -3,9 +3,9 @@
     --paper: #ffffff;
     --muted-light: #6b7b8c;
     --muted: #445066;
-    --accent-blue: #1E6FD9;
+    --accent-blue: rgb(30, 111, 217);
     --accent-cyan: #009fb7;
-    --blue-dark: #154f8a;
+    --blue-dark: rgb(21, 79, 138);
     --principalTextColor: #111827;
 
     --flag-shadow: rgba(0, 40, 90, 0.06);
