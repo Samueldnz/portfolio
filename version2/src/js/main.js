@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { title: "Passagens DUB - VEN", value: 120.55, parcela: "1/12", date: "15/03/26", status: "paid"},
                 { title: "Passagens MAD - BRA", value: 386.84, parcela: "1/10", date: "15/03/26", status: "paid"},
                 { title: "Passagens MAD - BRA", value: 220.13, parcela: "1/1", date: "15/03/26", status: "paid"},
-                { title: "Curso (CUOA)", value: 1665.97, parcela: "5/7", date:"30/03/26", status: "loading" }
+                { title: "Curso (CUOA)", value: 1665.97, parcela: "5/7", date:"30/03/26", status: "paid" }
             ]
         },
 
