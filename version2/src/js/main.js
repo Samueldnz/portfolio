@@ -6,6 +6,8 @@
     const minutesEl = document.getElementById('minutes');
     const secondsEl = document.getElementById('seconds');
 
+    let timerId;
+
     function update(){
         const now = new Date();
 
@@ -26,8 +28,8 @@
             document.querySelectorAll('.hero-countdown').forEach(c => c.innerHTML = '<div style="font-weight:700;">Voo confirmado ✈️</div>');
         }
     }
+    timerId = setInterval(update, 1000);
     update();
-    const timerId = setInterval(update, 1000);
 })();
 
 
