@@ -143,33 +143,33 @@ document.addEventListener('DOMContentLoaded', () => {
         abr: {
             label: "Abril",
             items: [
-                { title: "Matrícula (Liberec)", value: 4225, parcela: "3/3", date:"14/04/26", status: "loading"},
-                { title: "Hospedagem Liberec", value: 4488.02, parcela: "1/1", date:"14/04/26", status: "loading"},
-                { title: "Hospedagem Itália", value: 1000, parcela: "3/3", date:"15/04/26", status: "loading" },
-                { title: "Passagens BRA - PRG", value: 390.59, parcela: "2/10", date: "15/04/26", status: "loading"},
-                { title: "Passagens PRG - DUB", value: 245.05, parcela: "2/4", date: "15/04/26", status: "loading"},
-                { title: "Passagens DUB - VEN", value: 120.55, parcela: "2/12", date: "15/04/26", status: "loading"},
-                { title: "Passagens MAD - BRA", value: 386.84, parcela: "2/10", date: "15/04/26", status: "loading"},
-                { title: "Curso (CUOA)", value: 1665.97, parcela: "6/7", date:"30/04/26", status: "loading" },
+                { title: "Matrícula (Liberec)", value: 4225, parcela: "3/3", date:"14/04/26", status: "paid"},
+                { title: "Hospedagem Liberec", value: 4488.02, parcela: "1/1", date:"14/04/26", status: "paid"},
+                { title: "Hospedagem Itália", value: 1000, parcela: "3/3", date:"15/04/26", status: "paid" },
+                { title: "Passagens BRA - PRG", value: 390.59, parcela: "2/10", date: "15/04/26", status: "paid"},
+                { title: "Passagens PRG - DUB", value: 245.05, parcela: "2/4", date: "15/04/26", status: "paid"},
+                { title: "Passagens DUB - VEN", value: 120.55, parcela: "2/12", date: "15/04/26", status: "paid"},
+                { title: "Passagens MAD - BRA", value: 386.84, parcela: "2/10", date: "15/04/26", status: "paid"},
+                { title: "Curso (CUOA)", value: 1665.97, parcela: "6/7", date:"30/04/26", status: "paid" },
             ]
         },
         mai: {
             label: "Maio",
             items: [
-                { title: "Passagens BRA - PRG", value: 390.59, parcela: "3/10", date: "15/05/26", status: "loading"},
-                { title: "Passagens PRG - DUB", value: 245.05, parcela: "3/4", date: "15/05/26", status: "loading"},
-                { title: "Passagens DUB - VEN", value: 120.55, parcela: "3/12", date: "15/05/26", status: "loading"},
-                { title: "Passagens MAD - BRA", value: 386.84, parcela: "3/10", date: "15/05/26", status: "loading"},
-                { title: "Curso (CUOA)", value: 1665.97, parcela: "7/7", date:"30/05/26", status: "loading" },
+                { title: "Passagens BRA - PRG", value: 390.59, parcela: "3/10", date: "15/05/26", status: "paid"},
+                { title: "Passagens PRG - DUB", value: 245.05, parcela: "3/4", date: "15/05/26", status: "paid"},
+                { title: "Passagens DUB - VEN", value: 120.55, parcela: "3/12", date: "15/05/26", status: "paid"},
+                { title: "Passagens MAD - BRA", value: 386.84, parcela: "3/10", date: "15/05/26", status: "paid"},
+                { title: "Curso (CUOA)", value: 1665.97, parcela: "7/7", date:"30/05/26", status: "paid" },
             ]
         },
         jun: {
             label: "Junho",
             items: [
-                { title: "Passagens BRA - PRG", value: 390.59, parcela: "4/10", date: "15/06/26", status: "loading"},
-                { title: "Passagens PRG - DUB", value: 245.05, parcela: "4/4", date: "15/06/26", status: "loading"},
-                { title: "Passagens DUB - VEN", value: 120.55, parcela: "4/12", date: "15/06/26", status: "loading"},
-                { title: "Passagens MAD - BRA", value: 386.84, parcela: "4/10", date: "15/06/26", status: "loading"},
+                { title: "Passagens BRA - PRG", value: 390.59, parcela: "4/10", date: "15/06/26", status: "paid"},
+                { title: "Passagens PRG - DUB", value: 245.05, parcela: "4/4", date: "15/06/26", status: "paid"},
+                { title: "Passagens DUB - VEN", value: 120.55, parcela: "4/12", date: "15/06/26", status: "paid"},
+                { title: "Passagens MAD - BRA", value: 386.84, parcela: "4/10", date: "15/06/26", status: "paid"},
             ]
         },
         jul: {
@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
         tab.dataset.month = month;
         tab.textContent = expensesData[month].label.substring(0, 3);
 
-        if (index === 5) tab.classList.add('active');
+        if (index === 8) tab.classList.add('active');
 
         tabsContainer.appendChild(tab);
     });
