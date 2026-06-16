@@ -1,11 +1,7 @@
-import './App.css'
+import { Home } from "./pages/Home";
 
 function App() {
-  return (
-    <main className="bg-[var(--color-bg)] text-[var(--color-text)]">
-      ...
-    </main>
-  );
+  return <Home />;
 }
 
-export default App
+export default App;
