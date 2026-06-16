@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-
 import { Menu, X, Heart } from "lucide-react";
-
 import { AnimatePresence, motion } from "framer-motion";
+
+import { ThemeToggle } from "../../components/ThemeToggle";
+import { useTheme } from "../../hooks/useTheme";
 
 import avatar from "../../assets/avatar.jpg";
 
@@ -14,6 +15,8 @@ export function Navbar() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   const [activeSection, setActiveSection] = useState("inicio");
+
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -189,6 +192,11 @@ export function Navbar() {
             {navigationData.donation.label}
           </a>
         </div>
+
+        <ThemeToggle
+          isDark={theme === "dark"}
+          onToggle={toggleTheme}
+        />
 
         {/* MOBILE BUTTON */}
 
