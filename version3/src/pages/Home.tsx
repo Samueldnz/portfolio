@@ -1,6 +1,7 @@
 import { Navbar } from "../sections/Navbar/Navbar";
 import { Hero } from "../sections/Hero/Hero";
 import { Experience } from "../sections/Experience/Experience";
+import { Expenses } from "../sections/Expenses/Expenses";
 
 export function Home() {
   return (
@@ -16,43 +17,7 @@ export function Home() {
 
         {/* GASTOS */}
 
-        <section
-          id="gastos"
-          className="
-            min-h-screen
-            flex
-            items-center
-            justify-center
-            px-6
-          "
-        >
-          <div
-            className="
-              max-w-4xl
-              mx-auto
-              text-center
-            "
-          >
-            <h2
-              className="
-                text-4xl
-                font-bold
-                mb-6
-              "
-            >
-              Gastos
-            </h2>
-
-            <p
-              className="
-                text-[var(--color-muted)]
-                text-lg
-              "
-            >
-              Placeholder para a seção de gastos.
-            </p>
-          </div>
-        </section>
+        <Expenses />
 
         {/* CONTATO */}
 
