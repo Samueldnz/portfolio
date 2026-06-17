@@ -3,27 +3,58 @@ import { Menu, X, Heart } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { ThemeToggle } from "../../components/ThemeToggle";
+import { LanguageToggle } from "../../components/LanguageToggle";
+
 import { useTheme } from "../../hooks/useTheme";
+import { useLanguage } from "../../hooks/useLanguage";
 
 import avatar from "../../assets/avatar.jpg";
-
-import { navigationData } from "../../data/navigation";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
-  const [activeSection, setActiveSection] = useState("inicio");
+  const [activeSection, setActiveSection] =
+    useState("inicio");
 
-  const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme } =
+    useTheme();
+
+  const {
+    t,
+    language,
+    setLanguage,
+  } = useLanguage();
+
+  const navItems = [
+    {
+      id: "inicio",
+      label: t.navigation.links.home,
+    },
+    {
+      id: "sobre",
+      label: t.navigation.links.about,
+    },
+    {
+      id: "gastos",
+      label: t.navigation.links.expenses,
+    },
+    {
+      id: "contato",
+      label: t.navigation.links.contact,
+    },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 30);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener(
+      "scroll",
+      handleScroll
+    );
 
     return () =>
       window.removeEventListener(
@@ -31,6 +62,64 @@ export function Navbar() {
         handleScroll
       );
   }, []);
+
+
+  useEffect(() => {
+  const sections = [
+    "inicio",
+    "sobre",
+    "gastos",
+    "contato",
+  ];
+
+  const elements = sections
+    .map((id) =>
+      document.getElementById(id)
+    )
+    .filter(
+      (
+        element
+      ): element is HTMLElement =>
+        element !== null
+    );
+
+  const observer =
+    new IntersectionObserver(
+      (entries) => {
+        const visibleEntries =
+          entries.filter(
+            (entry) =>
+              entry.isIntersecting
+          );
+
+        if (
+          visibleEntries.length > 0
+        ) {
+          setActiveSection(
+            visibleEntries[0].target.id
+          );
+        }
+      },
+      {
+        root: null,
+
+        rootMargin:
+          "-35% 0px -55% 0px",
+
+        threshold: 0,
+      }
+    );
+
+  elements.forEach((element) =>
+    observer.observe(element)
+  );
+
+  return () => {
+    elements.forEach((element) =>
+      observer.unobserve(element)
+    );
+  };
+}, []);
 
   return (
     <nav
@@ -66,6 +155,7 @@ export function Navbar() {
           max-w-[1100px]
           mx-auto
           px-6
+
           flex
           items-center
           justify-between
@@ -75,8 +165,14 @@ export function Navbar() {
 
         <motion.a
           href="#inicio"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{
+            opacity: 0,
+            x: -20,
+          }}
+          animate={{
+            opacity: 1,
+            x: 0,
+          }}
           className="
             flex
             items-center
@@ -91,6 +187,7 @@ export function Navbar() {
               h-12
               rounded-full
               object-cover
+
               ring-2
               ring-[var(--color-accent-blue)]
             "
@@ -100,11 +197,11 @@ export function Navbar() {
             <h1
               className="
                 font-bold
-                text-[var(--color-text)]
                 leading-none
+                text-[var(--color-text)]
               "
             >
-              {navigationData.title}
+              {t.navigation.title}
             </h1>
 
             <p
@@ -113,12 +210,12 @@ export function Navbar() {
                 text-[var(--color-muted)]
               "
             >
-              {navigationData.subtitle}
+              {t.navigation.subtitle}
             </p>
           </div>
         </motion.a>
 
-        {/* DESKTOP */}
+        {/* DESKTOP NAV */}
 
         <div
           className="
@@ -128,21 +225,22 @@ export function Navbar() {
             gap-8
           "
         >
-          {navigationData.links.map((item) => (
+          {navItems.map((item) => (
             <a
               key={item.id}
               href={`#${item.id}`}
-              onClick={() =>
-                setActiveSection(item.id)
-              }
               className="
                 relative
+
                 text-sm
+                font-semibold
                 uppercase
                 tracking-wider
-                font-semibold
+
                 text-[var(--color-muted)]
+
                 hover:text-[var(--color-accent-blue)]
+
                 transition-colors
               "
             >
@@ -156,9 +254,12 @@ export function Navbar() {
                     left-1/2
                     -translate-x-1/2
                     -bottom-2
+
                     w-6
                     h-0.5
+
                     rounded-full
+
                     bg-[var(--color-accent-cyan)]
                   "
                 />
@@ -167,7 +268,7 @@ export function Navbar() {
           ))}
         </div>
 
-        {/* CTA */}
+        {/* DESKTOP ACTIONS */}
 
         <div
           className="
@@ -177,11 +278,23 @@ export function Navbar() {
             gap-4
           "
         >
+          <LanguageToggle
+            language={language}
+            onChange={setLanguage}
+          />
+
+          <ThemeToggle
+            isDark={theme === "dark"}
+            onToggle={toggleTheme}
+          />
+
           <a
-            href={navigationData.donation.url}
+            href="https://vakinha.bio/5793881"
             target="_blank"
+            rel="noopener noreferrer"
             className="
               btn-primary
+
               flex
               items-center
               gap-2
@@ -189,14 +302,9 @@ export function Navbar() {
           >
             <Heart size={16} />
 
-            {navigationData.donation.label}
+            {t.navigation.donate}
           </a>
         </div>
-
-        <ThemeToggle
-          isDark={theme === "dark"}
-          onToggle={toggleTheme}
-        />
 
         {/* MOBILE BUTTON */}
 
@@ -206,7 +314,9 @@ export function Navbar() {
             text-[var(--color-text)]
           "
           onClick={() =>
-            setIsMobileOpen(!isMobileOpen)
+            setIsMobileOpen(
+              !isMobileOpen
+            )
           }
         >
           {isMobileOpen
@@ -234,52 +344,115 @@ export function Navbar() {
             }}
             className="
               md:hidden
+
               overflow-hidden
+
               mt-4
+
               backdrop-blur-xl
+
               bg-[var(--color-paper)]
+
               border-t
               border-black/5
+              dark:border-white/5
             "
           >
             <div
               className="
                 p-6
+
                 flex
                 flex-col
                 gap-6
               "
             >
-              {navigationData.links.map(
-                (item) => (
-                  <a
-                    key={item.id}
-                    href={`#${item.id}`}
+              {/* NAVIGATION */}
+
+              {navItems.map((item) => (
+                <a
+                  key={item.id}
+                  href={`#${item.id}`}
+                  onClick={() =>
+                    setIsMobileOpen(false)
+                  }
+                  className="
+                    text-lg
+                    font-semibold
+                    text-[var(--color-text)]
+                  "
+                >
+                  {item.label}
+                </a>
+              ))}
+
+              {/* SETTINGS */}
+
+              <div
+                className="
+                  border-t
+                  border-black/5
+                  dark:border-white/5
+
+                  pt-4
+
+                  space-y-5
+                "
+              >
+                <div>
+                  <p
                     className="
-                      text-lg
-                      font-semibold
-                      text-[var(--color-text)]
+                      mb-2
+                      text-sm
+                      font-medium
+                      text-[var(--color-muted)]
                     "
-                    onClick={() =>
-                      setIsMobileOpen(false)
-                    }
                   >
-                    {item.label}
-                  </a>
-                )
-              )}
+                    {t.navigation.utilities.language}
+                  </p>
+
+                  <LanguageToggle
+                    language={language}
+                    onChange={setLanguage}
+                  />
+                </div>
+
+                <div>
+                  <p
+                    className="
+                      mb-2
+                      text-sm
+                      font-medium
+                      text-[var(--color-muted)]
+                    "
+                  >
+                    {t.navigation.utilities.theme}
+                  </p>
+
+                  <ThemeToggle
+                    isDark={
+                      theme === "dark"
+                    }
+                    onToggle={
+                      toggleTheme
+                    }
+                  />
+                </div>
+              </div>
+
+              {/* CTA */}
 
               <a
-                href={
-                  navigationData.donation.url
-                }
+                href="https://vakinha.bio/5793881"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="
                   btn-primary
+                  w-full
                   text-center
                 "
               >
-                Contribuir Agora
+                {t.navigation.donate}
               </a>
             </div>
           </motion.div>
