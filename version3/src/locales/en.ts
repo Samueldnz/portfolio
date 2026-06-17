@@ -28,6 +28,10 @@ export const en = {
 
     supportButton: "Support my dream",
 
+
+    instagram:
+      "Follow my journey:",
+
     donateButton: "Donate now",
 
     goal: "Goal: R$ 70,000",
@@ -42,6 +46,15 @@ export const en = {
       title: "#SamucaWithoutBorders",
       period: "April 2026 • July 2026",
     },
+
+    countdown: {
+      days: "days",
+      hours: "hrs",
+      minutes: "min",
+      seconds: "sec",
+    },
+    flipHint:
+  "Click the image to flip",
   },
 
   experience: {

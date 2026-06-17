@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "../../hooks/useLanguage";
 
 import { Countdown } from "../../components/Countdown";
 import { HeroGallery } from "../../components/HeroGallery";
@@ -7,6 +8,7 @@ import { ProfileCard } from "../../components/ProfileCard";
 import { heroData } from "../../data/hero";
 
 export function Hero() {
+  const {t} = useLanguage();
   return (
     <section
       id="inicio"
@@ -45,7 +47,7 @@ export function Hero() {
           }}
         >
           <span className="pill">
-            {heroData.eyebrow}
+            {t.hero.eyebrow}
           </span>
 
           <h1
@@ -57,7 +59,7 @@ export function Hero() {
               tracking-tight
             "
           >
-            {heroData.title}
+            {t.hero.title}
           </h1>
 
           <p
@@ -68,7 +70,7 @@ export function Hero() {
               text-[var(--color-muted)]
             "
           >
-            {heroData.description}
+            {t.hero.description}
           </p>
 
           <a
@@ -81,12 +83,17 @@ export function Hero() {
               text-[var(--color-accent-blue)]
             "
           >
-            {heroData.instagram.label}
+            {t.hero.instagram}{" "}
+              <strong>
+                {heroData.instagram.label}
+              </strong>
           </a>
 
           <div className="mt-8">
             <ProfileCard
-              {...heroData.profile}
+              name={heroData.profile.name}
+              role={t.hero.profileRole}
+              image={heroData.profile.image}
             />
           </div>
 
@@ -114,17 +121,32 @@ export function Hero() {
               target="_blank"
               className="btn-primary"
             >
-              {heroData.donation.label}
+              {t.hero.supportButton}
             </a>
 
             <span className="pill">
-              {heroData.goal}
+              {t.hero.goal}
             </span>
           </div>
         </motion.div>
 
         <HeroGallery
-          badge={heroData.badge}
+          badge={{
+            subtitle:
+              t.hero.badge.subtitle,
+
+            title:
+              t.hero.badge.title,
+
+            period:
+              t.hero.badge.period,
+
+            frontImage:
+              heroData.badge.frontImage,
+
+            backImage:
+              heroData.badge.backImage,
+          }}
           donationUrl={
             heroData.donation.url
           }

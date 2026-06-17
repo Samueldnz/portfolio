@@ -1,14 +1,16 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-import frontImage from "@/assets/samuel.jpg";
-import backImage from "@/assets/avatar-samuel.png";
+import { useLanguage } from "../hooks/useLanguage";
 
 interface HeroGalleryProps {
   badge: {
     title: string;
     subtitle: string;
     period: string;
+
+    frontImage: string;
+    backImage: string;
   };
 
   donationUrl: string;
@@ -20,6 +22,8 @@ export function HeroGallery({
 }: HeroGalleryProps) {
   const [flipped, setFlipped] =
     useState(false);
+
+  const { t } = useLanguage();
 
   return (
     <motion.div
@@ -70,7 +74,8 @@ export function HeroGallery({
             "
           >
             <img
-              src={frontImage}
+              src={badge.frontImage}
+              alt={badge.title}
               className="
                 w-full
                 h-full
@@ -89,7 +94,8 @@ export function HeroGallery({
             "
           >
             <img
-              src={backImage}
+              src={badge.backImage}
+              alt = {badge.title}
               className="
                 w-full
                 h-full
@@ -139,6 +145,16 @@ export function HeroGallery({
           {badge.period}
         </p>
 
+        <p
+          className="
+            mt-2
+            text-[11px]
+            text-[var(--color-muted)]
+          "
+        >
+          {t.hero.flipHint}
+        </p>
+
         <a
           href={donationUrl}
           target="_blank"
@@ -149,7 +165,7 @@ export function HeroGallery({
             text-center
           "
         >
-          Quero doar
+          {t.hero.donateButton}
         </a>
       </div>
     </motion.div>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useLanguage } from "../hooks/useLanguage";
 
 interface CountdownProps {
   targetDate: string;
@@ -7,6 +8,9 @@ interface CountdownProps {
 export function Countdown({
   targetDate,
 }: CountdownProps) {
+
+  const { t } = useLanguage();
+
   const calculate = () => {
     const diff =
       new Date(targetDate).getTime() -
@@ -49,13 +53,25 @@ export function Countdown({
   }, []);
 
   const items = [
-    ["Dias", time.days],
-    ["Horas", time.hours],
-    ["Min", time.minutes],
-    ["Seg", time.seconds],
-  ];
+  [t.hero.countdown.days, time.days],
+  [t.hero.countdown.hours, time.hours],
+  [t.hero.countdown.minutes, time.minutes],
+  [t.hero.countdown.seconds, time.seconds],
+];
 
   return (
+  <div>
+    <h3
+      className="
+        mb-4
+        text-sm
+        font-semibold
+        text-[var(--color-muted)]
+      "
+    >
+      {t.hero.countdownTitle}
+    </h3>
+
     <div
       className="
         flex
@@ -67,7 +83,7 @@ export function Countdown({
     >
       {items.map(([label, value]) => (
         <div
-          key={label}
+          key={String(label)}
           className="
             bg-[var(--color-paper)]
             rounded-xl
@@ -78,7 +94,12 @@ export function Countdown({
             shadow-md
           "
         >
-          <div className="text-xl font-bold">
+          <div
+            className="
+              text-xl
+              font-bold
+            "
+          >
             {value}
           </div>
 
@@ -93,5 +114,6 @@ export function Countdown({
         </div>
       ))}
     </div>
-  );
+  </div>
+);
 }

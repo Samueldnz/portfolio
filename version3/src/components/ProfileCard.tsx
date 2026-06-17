@@ -1,13 +1,13 @@
-import profileImage from "@/assets/samuel-profile.jpg";
-
 interface ProfileCardProps {
   name: string;
   role: string;
+  image: string;
 }
 
 export function ProfileCard({
   name,
   role,
+  image
 }: ProfileCardProps) {
   return (
     <div
@@ -28,7 +28,7 @@ export function ProfileCard({
       "
     >
       <img
-        src={profileImage}
+        src={image}
         alt={name}
         className="
           w-24

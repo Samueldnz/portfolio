@@ -26,6 +26,9 @@ export const pt = {
     description:
       "Seja bem-vindo! Sou Samuel, tenho 23 anos, e quero te convidar a fazer parte do meu sonho. Em abril de 2026 iniciarei um intercâmbio na Europa, começando pela Technical University of Liberec, na República Tcheca, e concluindo na CUOA University, na Itália. Será uma jornada única de aprendizado, crescimento profissional e desenvolvimento pessoal.",
 
+    instagram:
+      "Acompanhe minha jornada:",
+    
     supportButton: "Apoie meu sonho",
 
     donateButton: "Quero doar",
@@ -42,6 +45,14 @@ export const pt = {
       title: "#SamucaSemFronteiras",
       period: "Abril 2026 • Julho 2026",
     },
+    countdown: {
+      days: "dias",
+      hours: "hrs",
+      minutes: "min",
+      seconds: "seg",
+    },
+    flipHint:
+  "Clique na foto para alternar",
   },
 
   experience: {
