@@ -1,3 +1,6 @@
+export type MonthKey =
+  keyof typeof monthlyExpenses;
+
 export const expenseCategories = [
   {
     id: "cuoa",

@@ -1,6 +1,6 @@
 import { CampaignProgress } from "../../components/CampaignProgress";
 import { ExpenseCard } from "../../components/ExpenseCard";
-
+import { ExpenseTimeline } from "../../components/ExpenseTimeline";
 import { expenseCategories } from "../../data/expenses";
 
 export function Expenses() {
@@ -83,6 +83,8 @@ export function Expenses() {
             Ver Comprovantes
           </a>
         </div>
+
+        <ExpenseTimeline />
       </div>
     </section>
   );
