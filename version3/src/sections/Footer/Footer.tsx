@@ -3,7 +3,11 @@ import { FaInstagram } from "react-icons/fa";
 
 import { footerData } from "../../data/footer";
 
+import { useLanguage } from "../../hooks/useLanguage";
+
 export function Footer() {
+
+  const { t } = useLanguage();
   return (
     <footer
       id="contato"
@@ -44,7 +48,7 @@ export function Footer() {
 
           <div>
             <span className="pill">
-              Contato
+              {t.footer.contact}
             </span>
 
             <h2
@@ -55,7 +59,7 @@ export function Footer() {
                 font-black
               "
             >
-              {footerData.title}
+              {t.footer.title}
             </h2>
 
             <p
@@ -66,7 +70,7 @@ export function Footer() {
                 text-[var(--color-muted)]
               "
             >
-              {footerData.description}
+              {t.footer.description}
             </p>
           </div>
 
@@ -192,11 +196,11 @@ export function Footer() {
           "
         >
           <span>
-            © 2026 Samuca Europa
+            {t.footer.copyright}
           </span>
 
           <span>
-            Feito com ❤️ para transformar um sonho em realidade
+            {t.footer.signature}
           </span>
         </div>
       </div>

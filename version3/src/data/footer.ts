@@ -1,9 +1,4 @@
 export const footerData = {
-  title: "Samuca Europa 2026",
-
-  description:
-    "Cada sonho começa com um passo. Eu dei o primeiro, agora preciso da sua ajuda para dar os próximos. Obrigado por fazer parte dessa jornada.",
-
   contacts: {
     instagram: {
       label: "@sammsampaio",
