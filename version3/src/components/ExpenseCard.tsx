@@ -1,20 +1,22 @@
 import { motion } from "framer-motion";
 
 import { formatCurrency } from "../utils/currency";
+import { useLanguage } from "../hooks/useLanguage";
 
 interface ExpenseCardProps {
-  title: string;
+  titleKey: string;
   paid: number;
   total: number;
   featured?: boolean;
 }
 
 export function ExpenseCard({
-  title,
+  titleKey,
   paid,
   total,
   featured = false,
 }: ExpenseCardProps) {
+  const { t } = useLanguage();
   const percentage =
     total > 0
       ? (paid / total) * 100
@@ -58,12 +60,16 @@ export function ExpenseCard({
             font-bold
           "
         >
-          {title}
+          {
+            t.expenses.categories[
+              titleKey as keyof typeof t.expenses.categories
+            ]
+          }
         </h3>
 
         {completed && (
           <span className="pill">
-            Concluído
+            {t.expenses.completed}
           </span>
         )}
       </div>
@@ -131,7 +137,7 @@ export function ExpenseCard({
           text-[var(--color-muted)]
         "
       >
-        {percentage.toFixed(0)}% financiado
+        {percentage.toFixed(0)}% {t.expenses.financed}
       </p>
     </motion.article>
   );

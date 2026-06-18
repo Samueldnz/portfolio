@@ -1,20 +1,24 @@
 import { formatCurrency } from "../utils/currency";
 
+import { useLanguage } from "../hooks/useLanguage";
+
 interface ExpenseItemProps {
-  title: string;
+  titleKey: string;
   value: number;
   installment: string;
   date: string;
-  status: string;
+  status: "paid" | "planned";
 }
 
 export function ExpenseItem({
-  title,
+  titleKey,
   value,
   installment,
   date,
   status,
 }: ExpenseItemProps) {
+  const { t } = useLanguage();
+
   const paid = status === "paid";
 
   return (
@@ -39,7 +43,11 @@ export function ExpenseItem({
     >
       <div>
         <h4 className="font-semibold">
-          {title}
+          {
+            t.expenses.items[
+              titleKey as keyof typeof t.expenses.items
+            ]
+          }
         </h4>
 
         <p
@@ -48,7 +56,7 @@ export function ExpenseItem({
             text-[var(--color-muted)]
           "
         >
-          Parcela {installment}
+          {t.expenses.installment} {installment}
         </p>
       </div>
 
@@ -82,7 +90,11 @@ export function ExpenseItem({
           }
         `}
       >
-        {paid ? "Pago" : "Planejado"}
+        {
+          paid
+            ? t.expenses.timeline.paid
+            : t.expenses.timeline.planned
+        }
       </span>
     </div>
   );

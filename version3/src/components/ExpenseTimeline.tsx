@@ -3,12 +3,17 @@ import { useMemo, useState } from "react";
 import { ExpenseItem } from "./ExpenseItem";
 import { ExpenseMonthTab } from "./ExpenseMonthTab";
 
+import { useLanguage } from "../hooks/useLanguage";
+
 import {
   monthlyExpenses,
   type MonthKey,
 } from "../data/expenses";
 
 export function ExpenseTimeline() {
+
+  const { t } = useLanguage();
+
   const months = Object.entries(
     monthlyExpenses
     ) as [MonthKey, (typeof monthlyExpenses)[MonthKey]][];
@@ -32,7 +37,7 @@ export function ExpenseTimeline() {
     <div className="mt-16">
       <div className="mb-8">
         <span className="pill">
-          Financial Timeline
+          {t.expenses.timeline.subtitle}
         </span>
 
         <h3
@@ -42,7 +47,7 @@ export function ExpenseTimeline() {
             font-black
           "
         >
-          Cronograma de Pagamentos
+          {t.expenses.timeline.title}
         </h3>
       </div>
 
@@ -58,10 +63,14 @@ export function ExpenseTimeline() {
           pb-2
         "
       >
-        {months.map(([key, month]) => (
+        {months.map(([key]) => (
           <ExpenseMonthTab
             key={key}
-            label={month.label}
+            label={
+              t.expenses.months[
+                key as keyof typeof t.expenses.months
+              ]
+            }
             active={activeMonth === key}
             onClick={() =>
               setActiveMonth(key)
@@ -101,7 +110,11 @@ export function ExpenseTimeline() {
                 text-[var(--color-muted)]
               "
             >
-              {activeData.label}
+              {
+                t.expenses.months[
+                  activeMonth as keyof typeof t.expenses.months
+                ]
+              }
             </p>
 
             <h4
@@ -121,7 +134,8 @@ export function ExpenseTimeline() {
           </div>
 
           <div className="pill">
-            {activeData.items.length} lançamentos
+            {activeData.items.length}{" "}
+            {t.expenses.timeline.launches}
           </div>
         </div>
 

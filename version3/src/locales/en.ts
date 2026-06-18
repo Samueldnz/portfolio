@@ -130,6 +130,64 @@ export const en = {
       paid: "Paid",
       planned: "Planned",
     },
+    categories: {
+      cuoa: "CUOA Program & Tuition",
+
+      liberec:
+        "Research Program & Tuition",
+
+      airfare:
+        "Airfare",
+
+      accommodation:
+        "Accommodation",
+
+      foodTransport:
+        "Food & Transportation",
+
+      insurance:
+        "Insurance & Fees",
+    },
+
+    items: {
+      cuoaCourse:
+        "CUOA Program",
+
+      liberecEnrollment:
+        "Liberec Enrollment",
+
+      italyAccommodation:
+        "Italy Accommodation",
+
+      liberecAccommodation:
+        "Liberec Accommodation",
+
+      flightBraPrg:
+        "BRA → PRG Flights",
+
+      flightPrgDub:
+        "PRG → DUB Flights",
+
+      flightDubVen:
+        "DUB → VEN Flights",
+
+      flightMadBra:
+        "MAD → BRA Flights",
+    },
+
+    months: {
+      nov25: "November 2025",
+      dez25: "December 2025",
+      jan26: "January 2026",
+      fev26: "February 2026",
+      mar26: "March 2026",
+      abr26: "April 2026",
+      mai26: "May 2026",
+    },
+
+    installment: "Installment",
+
+    totalPlanned: "Total planned",
   },
 
   footer: {

@@ -3,7 +3,12 @@ import { ExpenseCard } from "../../components/ExpenseCard";
 import { ExpenseTimeline } from "../../components/ExpenseTimeline";
 import { expenseCategories } from "../../data/expenses";
 
+import { useLanguage } from "../../hooks/useLanguage";
+
 export function Expenses() {
+
+  const { t } = useLanguage();
+
   const totalPaid =
     expenseCategories.reduce(
       (sum, item) => sum + item.paid,
@@ -71,7 +76,7 @@ export function Expenses() {
             rel="noopener noreferrer"
             className="btn-primary"
           >
-            Quero Apoiar
+            {t.expenses.support}
           </a>
 
           <a
@@ -80,7 +85,7 @@ export function Expenses() {
             rel="noopener noreferrer"
             className="btn-outline"
           >
-            Ver Comprovantes
+            {t.expenses.receipts}
           </a>
         </div>
 

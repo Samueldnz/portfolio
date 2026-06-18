@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 
 import { formatCurrency } from "../utils/currency";
+import { useLanguage } from "../hooks/useLanguage";
 
 interface CampaignProgressProps {
   totalPaid: number;
@@ -11,6 +12,8 @@ export function CampaignProgress({
   totalPaid,
   totalGoal,
 }: CampaignProgressProps) {
+  const { t } = useLanguage();
+
   const percentage =
     totalGoal > 0
       ? (totalPaid / totalGoal) * 100
@@ -39,7 +42,7 @@ export function CampaignProgress({
       <div className="flex items-center justify-between gap-4 flex-wrap">
         <div>
           <span className="pill">
-            Financial Roadmap
+            {t.expenses.roadmap}
           </span>
 
           <h2
@@ -50,7 +53,7 @@ export function CampaignProgress({
               font-black
             "
           >
-            Gastos previstos
+            {t.expenses.title}
           </h2>
         </div>
 
@@ -61,7 +64,7 @@ export function CampaignProgress({
               text-[var(--color-muted)]
             "
           >
-            Total planejado
+            {t.expenses.totalPlanned}
           </p>
 
           <p
@@ -137,7 +140,7 @@ export function CampaignProgress({
           text-[var(--color-muted)]
         "
       >
-        {percentage.toFixed(0)}% da meta alcançada
+        {percentage.toFixed(0)}% {t.expenses.funded}
       </p>
     </motion.div>
   );

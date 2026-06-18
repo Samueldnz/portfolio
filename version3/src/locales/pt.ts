@@ -106,6 +106,7 @@ export const pt = {
   },
 
   expenses: {
+
     title: "Gastos previstos",
 
     roadmap: "Planejamento Financeiro",
@@ -128,6 +129,65 @@ export const pt = {
       paid: "Pago",
       planned: "Planejado",
     },
+
+    categories: {
+      cuoa: "Curso / Matrícula (CUOA)",
+
+      liberec:
+        "Pesquisa / Matrícula (Liberec)",
+
+      airfare:
+        "Passagem Aérea",
+
+      accommodation:
+        "Hospedagem",
+
+      foodTransport:
+        "Alimentação & Transporte",
+
+      insurance:
+        "Seguro e Taxas",
+    },
+
+    items: {
+      cuoaCourse:
+        "Curso (CUOA)",
+
+      liberecEnrollment:
+        "Matrícula (Liberec)",
+
+      italyAccommodation:
+        "Hospedagem Itália",
+
+      liberecAccommodation:
+        "Hospedagem Liberec",
+
+      flightBraPrg:
+        "Passagens BRA - PRG",
+
+      flightPrgDub:
+        "Passagens PRG - DUB",
+
+      flightDubVen:
+        "Passagens DUB - VEN",
+
+      flightMadBra:
+        "Passagens MAD - BRA",
+    },
+
+    months: {
+      nov25: "Novembro 2025",
+      dez25: "Dezembro 2025",
+      jan26: "Janeiro 2026",
+      fev26: "Fevereiro 2026",
+      mar26: "Março 2026",
+      abr26: "Abril 2026",
+      mai26: "Maio 2026",
+    },
+
+    installment: "Parcela",
+
+    totalPlanned: "Total planejado",
   },
 
   footer: {
