@@ -58,10 +58,53 @@ export const en = {
   },
 
   experience: {
+    eyebrow: "Europe 2026",
+
     title: "International Experience",
 
     subtitle:
-      "This journey combines technology research in the Czech Republic with executive education in Italy.",
+      "The journey will be divided between technological research in the Czech Republic and executive business education in Italy.",
+
+    roadmap: {
+      czech: "🇨🇿 Czech Republic",
+      italy: "🇮🇹 Italy",
+    },
+
+    institutions: {
+      tul: {
+        tag: "Research · Czech Republic",
+
+        title:
+          "Technical University of Liberec",
+
+        highlight:
+          "Development of touchscreen interfaces for prototype devices.",
+
+        topics: [
+          "Interface prototyping",
+          "User testing",
+          "Usability evaluation",
+          "GUI automation and control",
+        ],
+      },
+
+      cuoa: {
+        tag: "Executive Education · Italy",
+
+        title:
+          "CUOA Business School",
+
+        highlight:
+          "International program in business strategy and marketing.",
+
+        topics: [
+          "Business Strategy",
+          "Marketing Management",
+          "European business culture",
+          "Classes with executives and PhD professors",
+        ],
+      },
+    },
   },
 
   expenses: {

@@ -56,10 +56,53 @@ export const pt = {
   },
 
   experience: {
+    eyebrow: "Europa 2026",
+
     title: "Experiência Internacional",
 
     subtitle:
       "A jornada será dividida entre pesquisa tecnológica na República Tcheca e formação executiva em negócios na Itália.",
+
+    roadmap: {
+      czech: "🇨🇿 República Tcheca",
+      italy: "🇮🇹 Itália",
+    },
+
+    institutions: {
+      tul: {
+        tag: "Pesquisa · República Tcheca",
+
+        title:
+          "Technical University of Liberec",
+
+        highlight:
+          "Desenvolvimento de interfaces touchscreen para dispositivos protótipos.",
+
+        topics: [
+          "Prototipagem de interface",
+          "Testes com usuários",
+          "Avaliação de usabilidade",
+          "Automação e controle via GUI",
+        ],
+      },
+
+      cuoa: {
+        tag: "Educação Executiva · Itália",
+
+        title:
+          "CUOA Business School",
+
+        highlight:
+          "Curso internacional em estratégia e marketing empresarial.",
+
+        topics: [
+          "Business Strategy",
+          "Marketing Management",
+          "Cultura empresarial europeia",
+          "Aulas com executivos e professores PhD",
+        ],
+      },
+    },
   },
 
   expenses: {

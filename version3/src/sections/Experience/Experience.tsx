@@ -1,10 +1,15 @@
 import { motion } from "framer-motion";
 
+import { useLanguage } from "../../hooks/useLanguage";
+
 import { ExperienceCard } from "../../components/ExperienceCard";
 
 import { experienceData } from "../../data/experience";
 
 export function Experience() {
+
+  const { t } = useLanguage();
+
   return (
     <section
       id="sobre"
@@ -37,7 +42,7 @@ export function Experience() {
           "
         >
           <span className="pill">
-            Europa 2026
+            {t.experience.eyebrow}
           </span>
 
           <h2
@@ -48,7 +53,7 @@ export function Experience() {
               font-black
             "
           >
-            {experienceData.title}
+            {t.experience.title}
           </h2>
 
           <p
@@ -60,7 +65,7 @@ export function Experience() {
               text-[var(--color-muted)]
             "
           >
-            {experienceData.subtitle}
+            {t.experience.subtitle}
           </p>
         </motion.div>
 
@@ -80,7 +85,7 @@ export function Experience() {
           "
         >
           <div className="pill">
-            🇨🇿 Czech Republic
+            {t.experience.roadmap.czech}
           </div>
 
           <div
@@ -92,7 +97,7 @@ export function Experience() {
           />
 
           <div className="pill">
-            🇮🇹 Italy
+            {t.experience.roadmap.italy}
           </div>
         </div>
 
@@ -103,14 +108,17 @@ export function Experience() {
             gap-8
           "
         >
-          {experienceData.items.map(
-            (item) => (
-              <ExperienceCard
-                key={item.institution}
-                {...item}
-              />
-            )
-          )}
+          {experienceData.map((item) => (
+            <ExperienceCard
+              key={item.id}
+              country={item.country}
+              institution={
+                item.id === "tul"
+                  ? t.experience.institutions.tul
+                  : t.experience.institutions.cuoa
+              }
+            />
+          ))}
         </div>
       </div>
     </section>

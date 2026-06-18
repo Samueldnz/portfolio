@@ -1,19 +1,20 @@
 import { motion } from "framer-motion";
 
+interface ExperienceInstitution {
+  tag: string;
+  title: string;
+  highlight: string;
+  topics: readonly string[];
+}
+
 interface ExperienceCardProps {
   country: string;
-  tag: string;
-  institution: string;
-  description: string;
-  skills: string[];
+  institution: ExperienceInstitution;
 }
 
 export function ExperienceCard({
   country,
-  tag,
   institution,
-  description,
-  skills,
 }: ExperienceCardProps) {
   return (
     <motion.article
@@ -51,7 +52,7 @@ export function ExperienceCard({
             pill
           "
         >
-          {tag}
+          {institution.tag}
         </span>
 
         <span
@@ -72,7 +73,7 @@ export function ExperienceCard({
           mb-3
         "
       >
-        {institution}
+        {institution.title}
       </h3>
 
       <p
@@ -81,13 +82,13 @@ export function ExperienceCard({
           mb-6
         "
       >
-        {description}
+        {institution.highlight}
       </p>
 
       <ul className="space-y-2">
-        {skills.map((skill) => (
+        {institution.topics.map((topic) => (
           <li
-            key={skill}
+            key={topic}
             className="
               flex
               items-start
@@ -104,7 +105,7 @@ export function ExperienceCard({
               "
             />
 
-            <span>{skill}</span>
+            <span>{topic}</span>
           </li>
         ))}
       </ul>
