@@ -120,6 +120,7 @@
            px-3
            py-1.5
            rounded-full
+           text-sm
            font-[600];
     
     background: rgb(0 0 0 / 3%);

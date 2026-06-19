@@ -17,8 +17,7 @@ interface HeroGalleryProps {
 }
 
 export function HeroGallery({
-  badge,
-  donationUrl,
+  badge
 }: HeroGalleryProps) {
   const [flipped, setFlipped] =
     useState(false);
@@ -114,59 +113,171 @@ export function HeroGallery({
           right-4
           bottom-4
 
-          bg-[var(--color-glass)]
+          bg-white/85
+          dark:bg-slate-900/85
+
           backdrop-blur-xl
 
-          rounded-2xl
+          rounded-3xl
+
           p-4
 
-          shadow-xl
+          shadow-2xl
+          border
+          border-white/20
+
+          max-w-[380px]
         "
       >
-        <p
-          className="
-            text-xs
-            text-[var(--color-muted)]
-          "
-        >
-          {badge.subtitle}
-        </p>
 
-        <p className="font-bold">
-          {badge.title}
-        </p>
+        {!flipped ? (
+          <div>
+            <p
+              className="
+                text-[10px]
+                uppercase
+                tracking-[0.2em]
+                text-[var(--color-muted)]
+              "
+            >
+              🇨🇿 {t.hero.czechRepublic}
+            </p>
 
-        <p
-          className="
-            text-xs
-            text-[var(--color-muted)]
-          "
-        >
-          {badge.period}
-        </p>
+            <h3
+              className="
+                mt-1
+                text-xl
+                font-bold
+              "
+            >
+              {t.hero.missionStep1Title}
+            </h3>
 
-        <p
-          className="
-            mt-2
-            text-[11px]
-            text-[var(--color-muted)]
-          "
-        >
-          {t.hero.flipHint}
-        </p>
+            <div className="mt-3">
+              <span
+                className="
+                  inline-flex
+                  px-3
+                  py-1
 
-        <a
-          href={donationUrl}
-          target="_blank"
-          className="
-            btn-primary
-            mt-3
-            block
-            text-center
-          "
-        >
-          {t.hero.donateButton}
-        </a>
+                  rounded-full
+
+                  text-xs
+                  font-semibold
+
+                  bg-emerald-500/10
+                  text-emerald-600
+                "
+              >
+                {t.hero.approved}
+              </span>
+            </div>
+
+            <p
+              className="
+                mt-3
+                text-sm
+                text-[var(--color-muted)]
+              "
+            >
+              {t.hero.missionStep1Short}
+            </p>
+
+            <div
+              className="
+                mt-3
+                pt-3
+
+                border-t
+                border-black/5
+                dark:border-white/10
+              "
+            >
+              <p
+                className="
+                  text-xs
+                  text-[var(--color-muted)]
+                "
+              >
+                April 2026
+              </p>
+            </div>
+          </div>
+        ) : (
+          <div>
+            <p
+              className="
+                text-[10px]
+                uppercase
+                tracking-[0.2em]
+                text-[var(--color-muted)]
+              "
+            >
+              🇮🇹 {t.hero.italy}
+            </p>
+
+            <h3
+              className="
+                mt-1
+                text-xl
+                font-bold
+              "
+            >
+              {t.hero.missionStep2Title}
+            </h3>
+
+            <div className="mt-3">
+              <span
+                className="
+                  inline-flex
+                  px-3
+                  py-1
+
+                  rounded-full
+
+                  text-xs
+                  font-semibold
+
+                  bg-amber-500/10
+                  text-amber-600
+                "
+              >
+                {t.hero.pending}
+              </span>
+            </div>
+
+            <p
+              className="
+                mt-3
+                text-sm
+                text-[var(--color-muted)]
+              "
+            >
+              {t.hero.missionStep2Short}
+            </p>
+
+            <div
+              className="
+                mt-3
+                pt-3
+
+                border-t
+                border-black/5
+                dark:border-white/10
+              "
+            >
+              <p
+                className="
+                  text-xs
+                  text-[var(--color-muted)]
+                "
+              >
+                June 2026
+              </p>
+            </div>
+          </div>
+        )}
+        
       </div>
     </motion.div>
   );

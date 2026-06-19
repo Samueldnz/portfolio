@@ -29,7 +29,7 @@ export function Hero() {
           w-full
 
           grid
-          lg:grid-cols-[1.5fr_1fr]
+          lg:grid-cols-[1.7fr_0.9fr]
           gap-10
           items-center
         "
@@ -59,6 +59,7 @@ export function Hero() {
               xl:text-5xl
               font-[600]
               tracking-tight
+              leading-[0.95]
               font-playfair
             "
           >

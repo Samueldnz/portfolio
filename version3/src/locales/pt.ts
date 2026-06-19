@@ -61,7 +61,39 @@ export const pt = {
     nextStepDate:
       "Julho 2026",
     flipHint:
-  "Clique na foto para alternar",
+      "Clique na foto para alternar",
+
+    missionLabel: "Missão Internacional",
+
+    missionTitle: "Europa 2026",
+
+    missionStep1Title: "Technical University of Liberec",
+
+    missionStep1Desc:
+      "Pesquisa aplicada em interfaces, automação e experiência do usuário",
+
+    missionStep2Title: "CUOA Business School",
+
+    missionStep2Desc:
+      "Formação executiva em negócios, liderança e inovação",
+
+    czechRepublic:
+      "República Tcheca",
+
+    italy:
+      "Itália",
+
+    approved:
+      "Aprovado",
+
+    pending:
+      "Aguardando início",
+
+    missionStep1Short:
+      "Pesquisa aplicada em interfaces e automação",
+
+    missionStep2Short:
+      "Formação executiva em negócios e inovação",
   },
 
   experience: {
