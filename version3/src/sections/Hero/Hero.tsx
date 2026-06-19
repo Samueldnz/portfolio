@@ -13,23 +13,24 @@ export function Hero() {
     <section
       id="inicio"
       className="
-        min-h-screen
+        min-h-[calc(100vh-96px)]
         flex
         items-center
 
         px-6
-        py-32
+        pt-28
+        pb-8
       "
     >
       <div
         className="
-          max-w-[1100px]
+          max-w-[1150px]
           mx-auto
           w-full
 
           grid
-          lg:grid-cols-[1.1fr_0.9fr]
-          gap-12
+          lg:grid-cols-[1.5fr_1fr]
+          gap-10
           items-center
         "
       >
@@ -53,10 +54,12 @@ export function Hero() {
           <h1
             className="
               mt-5
-              text-5xl
-              lg:text-6xl
-              font-black
+              text-3xl
+              md:text-4xl
+              xl:text-5xl
+              font-[600]
               tracking-tight
+              font-playfair
             "
           >
             {t.hero.title}
@@ -65,7 +68,7 @@ export function Hero() {
           <p
             className="
               mt-6
-              text-lg
+              text-md
               leading-relaxed
               text-[var(--color-muted)]
             "
@@ -79,7 +82,7 @@ export function Hero() {
             className="
               inline-block
               mt-4
-              font-semibold
+              font-[600]
               text-[var(--color-accent-blue)]
             "
           >
@@ -89,7 +92,7 @@ export function Hero() {
               </strong>
           </a>
 
-          <div className="mt-8">
+          <div className="mt-6">
             <ProfileCard
               name={heroData.profile.name}
               role={t.hero.profileRole}
@@ -97,7 +100,48 @@ export function Hero() {
             />
           </div>
 
-          <div className="mt-8">
+          <div
+            className="
+              mt-2
+              rounded-3xl
+              p-5
+            "
+          >
+            <div
+              className="
+                flex
+                items-center
+                justify-between
+                gap-4
+                flex-wrap
+                mb-4
+              "
+            >
+              <div>
+                <p
+                  className="
+                    text-sm
+                    text-[var(--color-muted)]
+                  "
+                >
+                  {t.hero.nextStepLabel}
+                </p>
+
+                <h3
+                  className="
+                    text-md
+                    font-[600]
+                  "
+                >
+                  {t.hero.nextStepTitle}
+                </h3>
+              </div>
+
+              <span className="pill text-sm">
+                {t.hero.nextStepDate}
+              </span>
+            </div>
+
             <Countdown
               targetDate={
                 heroData.targetDate
@@ -105,29 +149,7 @@ export function Hero() {
             />
           </div>
 
-          <div
-            className="
-              mt-8
-              flex
-              flex-wrap
-              gap-4
-              items-center
-            "
-          >
-            <a
-              href={
-                heroData.donation.url
-              }
-              target="_blank"
-              className="btn-primary"
-            >
-              {t.hero.supportButton}
-            </a>
-
-            <span className="pill">
-              {t.hero.goal}
-            </span>
-          </div>
+          
         </motion.div>
 
         <HeroGallery

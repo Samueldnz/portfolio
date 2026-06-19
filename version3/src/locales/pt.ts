@@ -35,7 +35,7 @@ export const pt = {
 
     goal: "Meta: R$ 70.000",
 
-    countdownTitle: "Partida em",
+    countdownTitle: "Curso CUOA - Itália",
 
     profileRole:
       "Estudante de Ciência da Computação e apaixonado por empreendedorismo e inovação",
@@ -51,6 +51,15 @@ export const pt = {
       minutes: "min",
       seconds: "seg",
     },
+
+    nextStepLabel:
+      "Próxima etapa",
+
+    nextStepTitle:
+      "Curso CUOA • Itália",
+
+    nextStepDate:
+      "Julho 2026",
     flipHint:
   "Clique na foto para alternar",
   },

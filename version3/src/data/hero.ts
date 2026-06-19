@@ -1,5 +1,5 @@
 import samuelImage from "../assets/samuel.jpg"
-import samuelProfile from "../assets/samuel-profile.jpg"
+import samuelProfile from "../assets/avatar.jpg"
 import avatarPhoto from "../assets/avatar-samuel.png"
 
 
@@ -13,7 +13,7 @@ export const heroData = {
     url: "https://vakinha.bio/5793881",
   },
 
-  targetDate: "2026-04-01T00:00:00",
+  targetDate: "2026-07-05T12:00:00",
 
   profile: {
     name: "Samuel Sampaio Diniz",

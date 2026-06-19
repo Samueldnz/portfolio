@@ -35,6 +35,7 @@ export function ProfileCard({
           h-24
           rounded-full
           object-cover
+          
         "
       />
 

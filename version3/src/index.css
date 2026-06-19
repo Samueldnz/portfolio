@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -90,6 +91,10 @@
   }
 }
 
+.font-playfair {
+  font-family: "Playfair Display", serif;
+}
+
 @layer components {
   .btn-outline {
     @apply inline-block
@@ -115,7 +120,7 @@
            px-3
            py-1.5
            rounded-full
-           font-bold;
+           font-[600];
     
     background: rgb(0 0 0 / 3%);
   }

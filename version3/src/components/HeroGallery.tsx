@@ -46,7 +46,7 @@ export function HeroGallery({
         }
         className="
           relative
-          h-[500px]
+          h-[460px]
           cursor-pointer
           perspective-[1000px]
         "

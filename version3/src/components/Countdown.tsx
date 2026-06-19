@@ -61,16 +61,6 @@ export function Countdown({
 
   return (
   <div>
-    <h3
-      className="
-        mb-4
-        text-sm
-        font-semibold
-        text-[var(--color-muted)]
-      "
-    >
-      {t.hero.countdownTitle}
-    </h3>
 
     <div
       className="

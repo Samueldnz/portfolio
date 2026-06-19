@@ -36,7 +36,7 @@ export const en = {
 
     goal: "Goal: R$ 70,000",
 
-    countdownTitle: "Departure in",
+    countdownTitle: "CUOA Course - Italy",
 
     profileRole:
       "Computer Science student passionate about entrepreneurship and innovation",
@@ -53,6 +53,15 @@ export const en = {
       minutes: "min",
       seconds: "sec",
     },
+
+    nextStepLabel:
+      "Next step",
+
+    nextStepTitle:
+      "CUOA Program • Italy",
+
+    nextStepDate:
+      "July 2026",
     flipHint:
   "Click the image to flip",
   },
