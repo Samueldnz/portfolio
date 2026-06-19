@@ -101,7 +101,7 @@ export const en = {
   experience: {
     eyebrow: "Europe 2026",
 
-    title: "International Experience",
+    title: "My European Journey",
 
     subtitle:
       "The journey will be divided between technological research in the Czech Republic and executive business education in Italy.",
@@ -113,13 +113,24 @@ export const en = {
 
     institutions: {
       tul: {
-        tag: "Research · Czech Republic",
+        flag: "🇨🇿",
 
-        title:
+        country: "Czech Republic",
+
+        journeyTitle:
+          "Research Internship",
+
+        institution:
           "Technical University of Liberec",
 
         highlight:
           "Development of touchscreen interfaces for prototype devices.",
+
+        period:
+          "Apr – Jun 2026",
+
+        startDate: "2026-04-14",
+        endDate: "2026-06-16",
 
         topics: [
           "Interface prototyping",
@@ -130,13 +141,24 @@ export const en = {
       },
 
       cuoa: {
-        tag: "Executive Education · Italy",
+        flag: "🇮🇹",
 
-        title:
+        country: "Italy",
+
+        journeyTitle:
+          "Executive Business Program",
+
+        institution:
           "CUOA Business School",
 
         highlight:
           "International program in business strategy and marketing.",
+
+        period:
+          "Jun – Jul 2026",
+
+        startDate: "2026-07-05",
+        endDate: "2026-07-24",
 
         topics: [
           "Business Strategy",
@@ -145,6 +167,13 @@ export const en = {
           "Classes with executives and PhD professors",
         ],
       },
+    },
+
+    focusAreas: "Focus Areas",
+    status: {
+      preparing: "Preparing",
+      active: "In Progress",
+      completed: "Completed",
     },
   },
 

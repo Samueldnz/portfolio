@@ -38,7 +38,7 @@ export function Experience() {
           }}
           className="
             text-center
-            mb-16
+            mb-12
           "
         >
           <span className="pill">
@@ -48,9 +48,12 @@ export function Experience() {
           <h2
             className="
               mt-4
-              text-4xl
-              md:text-5xl
-              font-black
+              text-3xl
+              md:text-4xl
+              xl:text-5xl
+              font-[600]
+              font-playfair
+              tracking-tight
             "
           >
             {t.experience.title}
@@ -69,38 +72,6 @@ export function Experience() {
           </p>
         </motion.div>
 
-        {/* ROADMAP */}
-
-        <div
-          className="
-            hidden
-            lg:flex
-
-            items-center
-            justify-center
-
-            gap-6
-
-            mb-12
-          "
-        >
-          <div className="pill">
-            {t.experience.roadmap.czech}
-          </div>
-
-          <div
-            className="
-              h-[2px]
-              w-24
-              bg-[var(--color-accent-cyan)]
-            "
-          />
-
-          <div className="pill">
-            {t.experience.roadmap.italy}
-          </div>
-        </div>
-
         <div
           className="
             grid
@@ -111,11 +82,8 @@ export function Experience() {
           {experienceData.map((item) => (
             <ExperienceCard
               key={item.id}
-              country={item.country}
               institution={
-                item.id === "tul"
-                  ? t.experience.institutions.tul
-                  : t.experience.institutions.cuoa
+                t.experience.institutions[item.id]
               }
             />
           ))}

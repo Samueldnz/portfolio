@@ -99,7 +99,7 @@ export const pt = {
   experience: {
     eyebrow: "Europa 2026",
 
-    title: "Experiência Internacional",
+    title: "Minha Jornada Europeia",
 
     subtitle:
       "A jornada será dividida entre pesquisa tecnológica na República Tcheca e formação executiva em negócios na Itália.",
@@ -111,16 +111,31 @@ export const pt = {
 
     institutions: {
       tul: {
-        tag: "Pesquisa · República Tcheca",
+        flag: "🇨🇿",
 
-        title:
+        country:
+          "República Tcheca",
+
+        journeyTitle:
+          "Estágio em Pesquisa",
+
+        institution:
           "Technical University of Liberec",
 
         highlight:
           "Desenvolvimento de interfaces touchscreen para dispositivos protótipos.",
 
+        period:
+          "Abr – Jun 2026",
+
+        status:
+          "Confirmado",
+
+        startDate: "2026-04-14",
+        endDate: "2026-06-16",
+
         topics: [
-          "Prototipagem de interface",
+          "Prototipagem de interfaces",
           "Testes com usuários",
           "Avaliação de usabilidade",
           "Automação e controle via GUI",
@@ -128,21 +143,40 @@ export const pt = {
       },
 
       cuoa: {
-        tag: "Educação Executiva · Itália",
+        flag: "🇮🇹",
 
-        title:
+        country:
+          "Itália",
+
+        journeyTitle:
+          "Programa Executivo de Negócios",
+
+        institution:
           "CUOA Business School",
 
         highlight:
-          "Curso internacional em estratégia e marketing empresarial.",
+          "Programa internacional focado em estratégia, liderança e marketing.",
+
+        period:
+          "Jun – Jul 2026",
+
+        startDate: "2026-07-05",
+        endDate: "2026-07-24",
 
         topics: [
-          "Business Strategy",
-          "Marketing Management",
+          "Estratégia de Negócios",
+          "Gestão de Marketing",
           "Cultura empresarial europeia",
           "Aulas com executivos e professores PhD",
         ],
       },
+    },
+
+    focusAreas: "Áreas de Atuação",
+    status: {
+      preparing: "Preparando",
+      active: "Realizando",
+      completed: "Concluído",
     },
   },
 
