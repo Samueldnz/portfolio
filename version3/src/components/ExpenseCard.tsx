@@ -143,11 +143,13 @@ export function ExpenseCard({
 
             ${
               completed
-                ? "bg-emerald-500"
+                ? "bg-gradient-to-r from-emerald-500 to-emerald-600"
                 : inProgress
-                  ? "bg-[var(--color-accent-blue)]"
+                  ? "bg-gradient-to-r from-[var(--color-accent-blue)] to-[var(--color-blue-dark)]"
                   : "bg-amber-500"
             }
+
+            
           `}
         />
       </div>

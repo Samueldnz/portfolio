@@ -152,9 +152,9 @@ export function CampaignProgress({
             h-full
             rounded-full
 
-            bg-gradient-to-r
-            from-[var(--color-accent-blue)]
-            to-[var(--color-accent-cyan)]
+            bg-gradient-to-r 
+            from-[var(--color-accent-blue)] 
+            to-[var(--color-blue-dark)]
           "
         />
       </div>
