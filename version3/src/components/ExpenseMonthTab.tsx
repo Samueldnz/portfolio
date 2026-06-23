@@ -16,7 +16,7 @@ export function ExpenseMonthTab({
         px-4
         py-2
 
-        rounded-xl
+        rounded-full
 
         whitespace-nowrap
 
@@ -24,8 +24,18 @@ export function ExpenseMonthTab({
 
         ${
           active
-            ? "bg-[var(--color-accent-blue)] text-white"
-            : "bg-[var(--color-paper)]"
+          ? `
+              bg-[var(--color-accent-blue)]/10
+              text-[var(--color-accent-blue)]
+              border
+              border-[var(--color-accent-blue)]/20
+            `
+          : `
+              bg-[var(--color-paper)]
+              text-[var(--color-muted)]
+              border
+              border-transparent
+            `
         }
       `}
     >

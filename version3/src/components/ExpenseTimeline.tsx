@@ -44,7 +44,12 @@ export function ExpenseTimeline() {
           className="
             mt-4
             text-3xl
-            font-black
+            md:text-4xl
+
+            font-playfair
+            font-[600]
+
+            tracking-tight
           "
         >
           {t.expenses.timeline.title}
@@ -61,6 +66,8 @@ export function ExpenseTimeline() {
           overflow-x-auto
 
           pb-2
+
+          scrollbar-hide
         "
       >
         {months.map(([key]) => (
@@ -89,7 +96,7 @@ export function ExpenseTimeline() {
 
           rounded-3xl
 
-          p-6
+          p-8
 
           shadow-lg
         "
@@ -107,6 +114,9 @@ export function ExpenseTimeline() {
             <p
               className="
                 text-sm
+                uppercase
+                tracking-wider
+
                 text-[var(--color-muted)]
               "
             >
@@ -120,7 +130,8 @@ export function ExpenseTimeline() {
             <h4
               className="
                 text-2xl
-                font-bold
+                mt-2
+                font-[600]
               "
             >
               {monthTotal.toLocaleString(
