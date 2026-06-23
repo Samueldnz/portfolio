@@ -184,8 +184,6 @@ export const en = {
 
     support: "Support This Journey",
 
-    receipts: "View Receipts",
-
     funded: "of the goal achieved",
 
     completed: "Completed",
@@ -200,18 +198,6 @@ export const en = {
       completed: "Completed",
       inProgress: "In Progress",
       awaiting: "Awaiting Funding",
-    },
-
-    receiptsSection: {
-      eyebrow: "Transparency",
-
-      title:
-        "Receipts & Documentation",
-
-      description:
-        "All expenses presented on this page are supported by receipts, invoices or official payment confirmations available for verification.",
-
-      button: "View Receipts",
     },
 
     timeline: {
@@ -290,10 +276,21 @@ export const en = {
     description:
       "Every dream begins with a first step. I have taken mine, and now I need your support to take the next ones. Thank you for being part of this journey.",
 
+    receipts: "View Receipts",
+
+    transparency1:
+      "All expenses are supported by documentation",
+
+    transparency2:
+      "Receipts available for public verification",
+
+    transparency3:
+      "Regular updates on funding progress",
+
     copyright:
       "© 2026 Samuca Europe",
 
     signature:
-      "Built with ❤️ to turn a dream into reality",
+      "From Resende to Europe - powered by education.",
   },
 } as const;

@@ -188,8 +188,6 @@ export const pt = {
 
     support: "Quero Apoiar",
 
-    receipts: "Ver Comprovantes",
-
     funded: "da meta alcançada",
 
     completed: "Concluído",
@@ -204,18 +202,6 @@ export const pt = {
       completed: "Concluído",
       inProgress: "Em andamento",
       awaiting: "Aguardando apoio",
-    },
-
-    receiptsSection: {
-      eyebrow: "Transparência",
-
-      title:
-        "Comprovantes e Documentação",
-
-      description:
-        "Todos os gastos apresentados nesta página possuem comprovantes, notas fiscais ou confirmações oficiais de pagamento disponíveis para consulta.",
-
-      button: "Ver Comprovantes",
     },
 
     timeline: {
@@ -295,10 +281,21 @@ export const pt = {
     description:
       "Cada sonho começa com um passo. Eu dei o primeiro, agora preciso da sua ajuda para dar os próximos. Obrigado por fazer parte dessa jornada!",
 
+    receipts: "Ver Comprovantes",
+
+    transparency1:
+      "Todos os gastos possuem documentação comprobatória",
+
+    transparency2:
+      "Comprovantes disponíveis para consulta pública",
+
+    transparency3:
+      "Atualizações frequentes da arrecadação",
+
     copyright:
       "© 2026 Samuca Europa",
 
     signature:
-      "Feito com ❤️ para transformar um sonho em realidade",
+      "De Resende para a Europa - impulsionado pela educação.",
   },
 } as const;
