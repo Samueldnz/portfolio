@@ -3,11 +3,7 @@ import { ExpenseCard } from "../../components/ExpenseCard";
 import { ExpenseTimeline } from "../../components/ExpenseTimeline";
 import { expenseCategories } from "../../data/expenses";
 
-import { useLanguage } from "../../hooks/useLanguage";
-
 export function Expenses() {
-
-  const { t } = useLanguage();
 
   const totalPaid =
     expenseCategories.reduce(
@@ -39,36 +35,6 @@ export function Expenses() {
           totalPaid={totalPaid}
           totalGoal={totalGoal}
         />
-
-        <div
-          className="
-            mt-10
-
-            flex
-            flex-col
-            sm:flex-row
-
-            gap-4
-          "
-        >
-          <a
-            href="https://vakinha.bio/5793881"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-          >
-            {t.expenses.support}
-          </a>
-
-          <a
-            href="https://drive.google.com/drive/folders/1rrQOnqVwlFWdx9gQ7lChGkUz9VSky0QX?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-outline"
-          >
-            {t.expenses.receipts}
-          </a>
-        </div>
 
         <div
           className="

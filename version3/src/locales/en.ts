@@ -202,6 +202,18 @@ export const en = {
       awaiting: "Awaiting Funding",
     },
 
+    receiptsSection: {
+      eyebrow: "Transparency",
+
+      title:
+        "Receipts & Documentation",
+
+      description:
+        "All expenses presented on this page are supported by receipts, invoices or official payment confirmations available for verification.",
+
+      button: "View Receipts",
+    },
+
     timeline: {
       title: "Payment Schedule",
       subtitle: "Financial Timeline",

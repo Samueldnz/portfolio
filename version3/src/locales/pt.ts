@@ -206,6 +206,18 @@ export const pt = {
       awaiting: "Aguardando apoio",
     },
 
+    receiptsSection: {
+      eyebrow: "Transparência",
+
+      title:
+        "Comprovantes e Documentação",
+
+      description:
+        "Todos os gastos apresentados nesta página possuem comprovantes, notas fiscais ou confirmações oficiais de pagamento disponíveis para consulta.",
+
+      button: "Ver Comprovantes",
+    },
+
     timeline: {
       title: "Cronograma de Pagamentos",
       subtitle: "Linha do tempo financeira",

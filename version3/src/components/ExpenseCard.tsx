@@ -53,7 +53,7 @@ export function ExpenseCard({
         <h3
           className="
             text-lg
-            font-bold
+            font-[600]
           "
         >
           {
