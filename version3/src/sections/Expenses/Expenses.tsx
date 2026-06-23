@@ -42,25 +42,6 @@ export function Expenses() {
 
         <div
           className="
-            mt-8
-
-            grid
-            md:grid-cols-2
-            gap-6
-          "
-        >
-          {expenseCategories.map(
-            (expense) => (
-              <ExpenseCard
-                key={expense.id}
-                {...expense}
-              />
-            )
-          )}
-        </div>
-
-        <div
-          className="
             mt-10
 
             flex
@@ -87,6 +68,25 @@ export function Expenses() {
           >
             {t.expenses.receipts}
           </a>
+        </div>
+
+        <div
+          className="
+            mt-8
+
+            grid
+            md:grid-cols-2
+            gap-6
+          "
+        >
+          {expenseCategories.map(
+            (expense) => (
+              <ExpenseCard
+                key={expense.id}
+                {...expense}
+              />
+            )
+          )}
         </div>
 
         <ExpenseTimeline />

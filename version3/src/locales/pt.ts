@@ -196,6 +196,16 @@ export const pt = {
 
     financed: "financiado",
 
+    raised: "Arrecadado",
+
+    remaining: "Restante",
+
+    status: {
+      completed: "Concluído",
+      inProgress: "Em andamento",
+      awaiting: "Aguardando apoio",
+    },
+
     timeline: {
       title: "Cronograma de Pagamentos",
       subtitle: "Linha do tempo financeira",

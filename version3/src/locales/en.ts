@@ -192,6 +192,16 @@ export const en = {
 
     financed: "funded",
 
+    raised: "Raised",
+
+    remaining: "Remaining",
+
+    status: {
+      completed: "Completed",
+      inProgress: "In Progress",
+      awaiting: "Awaiting Funding",
+    },
+
     timeline: {
       title: "Payment Schedule",
       subtitle: "Financial Timeline",

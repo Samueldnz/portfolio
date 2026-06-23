@@ -64,16 +64,16 @@ export function CampaignProgress({
               text-[var(--color-muted)]
             "
           >
-            {t.expenses.totalPlanned}
+            {percentage.toFixed(0)}%
           </p>
 
           <p
             className="
-              text-xl
-              font-bold
+              text-lg
+              font-semibold
             "
           >
-            {formatCurrency(totalGoal)}
+            {t.expenses.funded}
           </p>
         </div>
       </div>
@@ -127,8 +127,8 @@ export function CampaignProgress({
             rounded-full
 
             bg-gradient-to-r
-            from-emerald-500
-            to-green-600
+            from-[var(--color-accent-blue)]
+            to-[var(--color-accent-cyan)]
           "
         />
       </div>

@@ -14,13 +14,15 @@ export function ExpenseCard({
   titleKey,
   paid,
   total,
-  featured = false,
 }: ExpenseCardProps) {
   const { t } = useLanguage();
   const percentage =
     total > 0
       ? (paid / total) * 100
       : 0;
+
+  const inProgress =
+    paid > 0 && paid < total;
 
   const completed =
     paid >= total;
@@ -38,12 +40,6 @@ export function ExpenseCard({
         rounded-3xl
         p-6
         shadow-lg
-
-        ${
-          featured
-            ? "lg:col-span-2"
-            : ""
-        }
       `}
     >
       <div
@@ -67,11 +63,33 @@ export function ExpenseCard({
           }
         </h3>
 
-        {completed && (
-          <span className="pill">
-            {t.expenses.completed}
-          </span>
-        )}
+        <span
+          className={`
+            px-3
+            py-1
+
+            rounded-full
+
+            text-xs
+            font-semibold
+
+            ${
+              completed
+                ? "bg-emerald-500/10 text-emerald-600"
+                : inProgress
+                  ? "bg-blue-500/10 text-blue-600"
+                  : "bg-amber-500/10 text-amber-600"
+            }
+          `}
+        >
+          {
+            completed
+              ? `✓ ${t.expenses.status.completed}`
+              : inProgress
+                ? `◐ ${t.expenses.status.inProgress}`
+                : `○ ${t.expenses.status.awaiting}`
+          }
+        </span>
       </div>
 
       <div
@@ -119,14 +137,18 @@ export function ExpenseCard({
           transition={{
             duration: 0.8,
           }}
-          className="
+          className={`
             h-full
             rounded-full
 
-            bg-gradient-to-r
-            from-[var(--color-accent-blue)]
-            to-[var(--color-blue-dark)]
-          "
+            ${
+              completed
+                ? "bg-emerald-500"
+                : inProgress
+                  ? "bg-[var(--color-accent-blue)]"
+                  : "bg-amber-500"
+            }
+          `}
         />
       </div>
 
@@ -137,7 +159,13 @@ export function ExpenseCard({
           text-[var(--color-muted)]
         "
       >
-        {percentage.toFixed(0)}% {t.expenses.financed}
+        {
+          completed
+            ? `100% ${t.expenses.financed}`
+            : inProgress
+              ? `${percentage.toFixed(0)}% ${t.expenses.financed}`
+              : t.expenses.status.awaiting
+        }
       </p>
     </motion.article>
   );
