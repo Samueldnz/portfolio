@@ -24,12 +24,18 @@ export function ExpenseItem({
   return (
     <div
       className="
-        flex
-        items-center
-        justify-between
-        gap-4
+        relative
 
-        p-4
+        ml-8
+
+        grid
+        grid-cols-[1fr_1fr_1fr]
+
+        items-center
+
+        gap-6
+
+        p-5
 
         rounded-2xl
 
@@ -41,6 +47,27 @@ export function ExpenseItem({
         dark:border-white/5
       "
     >
+      <div
+        className={`
+          absolute
+
+          -left-6
+          top-6
+
+          h-4
+          w-4
+
+          rounded-full
+
+          border-4
+
+          ${
+            paid
+              ? "bg-emerald-500 border-emerald-100"
+              : "bg-[var(--color-accent-blue)] border-blue-100"
+          }
+        `}
+      />
       <div>
         <h4 className="font-semibold">
           {
@@ -60,8 +87,15 @@ export function ExpenseItem({
         </p>
       </div>
 
-      <div className="text-right">
-        <p className="font-semibold">
+      <div 
+        className="
+          text-center">
+        <p
+          className="
+            text-lg
+            font-[500]
+          "
+        >
           {formatCurrency(value)}
         </p>
 
@@ -75,27 +109,36 @@ export function ExpenseItem({
         </p>
       </div>
 
-      <span
-        className={`
-          px-3
-          py-1
-          rounded-full
-          text-xs
-          font-semibold
-
-          ${
-            paid
-              ? "bg-emerald-500/10 text-emerald-600"
-              : "bg-blue-500/10 text-blue-600"
-          }
-        `}
+      <div
+        className="
+          flex
+          justify-end
+        "
       >
-        {
-          paid
-            ? t.expenses.timeline.paid
-            : t.expenses.timeline.planned
-        }
-      </span>
+        <span
+          className={`
+            px-3
+            py-1
+
+            rounded-full
+
+            text-xs
+            font-semibold
+
+            ${
+              paid
+                ? "bg-emerald-500/10 text-emerald-600"
+                : "bg-blue-500/10 text-blue-600"
+            }
+          `}
+        >
+          {
+            paid
+              ? t.expenses.timeline.paid
+              : t.expenses.timeline.planned
+          }
+        </span>
+      </div>
     </div>
   );
 }

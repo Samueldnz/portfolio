@@ -261,6 +261,8 @@ export const en = {
       mar26: "March 2026",
       abr26: "April 2026",
       mai26: "May 2026",
+      jun26: "June 2026",
+      jul26: "July 2026"
     },
 
     installment: "Installment",

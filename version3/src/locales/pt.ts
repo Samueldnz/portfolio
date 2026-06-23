@@ -266,6 +266,8 @@ export const pt = {
       mar26: "Março 2026",
       abr26: "Abril 2026",
       mai26: "Maio 2026",
+      jun26: "Junho 2026",
+      jul26: "Julho 2026",
     },
 
     installment: "Parcela",

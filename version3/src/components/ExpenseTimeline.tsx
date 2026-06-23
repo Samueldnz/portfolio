@@ -65,9 +65,14 @@ export function ExpenseTimeline() {
 
           overflow-x-auto
 
-          pb-2
+          pb-8
+          px-1
+          pt-1
 
-          scrollbar-hide
+          scrollbar-thin
+          scrollbar-track-transparent
+          scrollbar-thumb-black/10
+          hover:scrollbar-thumb-black/20
         "
       >
         {months.map(([key]) => (
@@ -144,7 +149,19 @@ export function ExpenseTimeline() {
             </h4>
           </div>
 
-          <div className="pill">
+          <div className="
+              px-4
+              py-2
+
+              rounded-full
+
+              bg-[var(--color-accent-blue)]/12
+
+              text-[var(--color-accent-blue)]
+
+              text-sm
+              font-medium
+            ">
             {activeData.items.length}{" "}
             {t.expenses.timeline.launches}
           </div>
@@ -152,11 +169,27 @@ export function ExpenseTimeline() {
 
         <div
           className="
-            mt-6
+            mt-8
 
-            space-y-3
+            relative
+
+            space-y-4
           "
         >
+
+          <div
+            className="
+              absolute
+
+              left-4
+              top-2
+              bottom-2
+
+              w-px
+
+              bg-[var(--color-accent-blue)]/15
+            "
+          />
           {activeData.items.map(
             (expense, index) => (
               <ExpenseItem
