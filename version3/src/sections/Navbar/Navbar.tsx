@@ -138,9 +138,7 @@ export function Navbar() {
               py-3
               bg-[var(--color-glass)]
               backdrop-blur-xl
-              border-b
-              border-black/5
-              dark:border-white/5
+
               shadow-lg
             `
             : `
