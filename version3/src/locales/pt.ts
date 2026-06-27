@@ -273,6 +273,9 @@ export const pt = {
     installment: "Parcela",
 
     totalPlanned: "Total planejado",
+
+    value: "Valor",
+    duedata: "Vencimento"
   },
 
   footer: {

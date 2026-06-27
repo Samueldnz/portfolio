@@ -135,8 +135,12 @@ export function ExpenseTimeline() {
             <h4
               className="
                 text-2xl
+                md:text-[2.2rem]
+
                 mt-2
-                font-[600]
+
+                font-bold
+                tracking-tight
               "
             >
               {monthTotal.toLocaleString(

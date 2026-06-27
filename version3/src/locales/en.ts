@@ -268,6 +268,9 @@ export const en = {
     installment: "Installment",
 
     totalPlanned: "Total planned",
+
+    value: "Value",
+    duedata: "Due Date"
   },
 
   footer: {
