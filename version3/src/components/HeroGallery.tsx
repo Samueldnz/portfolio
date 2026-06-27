@@ -109,24 +109,43 @@ export function HeroGallery({
       <div
         className="
           absolute
+          inset-x-0
+          bottom-0
+          h-44
+
+          rounded-b-3xl
+
+          bg-gradient-to-t
+          from-black/55
+          via-black/20
+          to-transparent
+
+          pointer-events-none
+        "
+      />
+
+      <div
+        className="
+          absolute
           left-4
           right-4
           bottom-4
 
-          bg-white/85
-          dark:bg-slate-900/85
-
-          backdrop-blur-xl
-
-          rounded-3xl
-
-          p-4
-
-          shadow-2xl
-          border
-          border-white/20
-
           max-w-[380px]
+          rounded-3xl
+          p-5
+
+          backdrop-blur-2xl
+
+          bg-white/80
+          dark:bg-white/[0.06]
+
+          border
+          border-white/30
+          dark:border-white/10
+
+          shadow-xl
+          dark:shadow-black/50
         "
       >
 
@@ -137,7 +156,8 @@ export function HeroGallery({
                 text-[10px]
                 uppercase
                 tracking-[0.2em]
-                text-[var(--color-muted)]
+                text-slate-500
+                dark:text-slate-300
               "
             >
               🇨🇿 {t.hero.czechRepublic}
@@ -147,7 +167,10 @@ export function HeroGallery({
               className="
                 mt-1
                 text-xl
-                font-bold
+                font-semibold
+                tracking-tight
+                text-slate-900
+                dark:text-white
               "
             >
               {t.hero.missionStep1Title}
@@ -177,7 +200,8 @@ export function HeroGallery({
               className="
                 mt-3
                 text-sm
-                text-[var(--color-muted)]
+                text-slate-500
+                dark:text-slate-300
               "
             >
               {t.hero.missionStep1Short}
@@ -196,7 +220,8 @@ export function HeroGallery({
               <p
                 className="
                   text-xs
-                  text-[var(--color-muted)]
+                  text-slate-500
+                  dark:text-slate-300
                 "
               >
                 April 2026
