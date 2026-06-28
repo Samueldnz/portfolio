@@ -80,17 +80,31 @@ export function Hero() {
           <a
             href={heroData.instagram.url}
             target="_blank"
+            rel="noopener noreferrer"
             className="
               inline-block
               mt-4
-              font-[600]
-              text-[var(--color-accent-blue)]
+
+              text-[var(--color-muted)]
+
+              transition-colors
+              hover:text-[var(--color-text)]
             "
           >
             {t.hero.instagram}{" "}
-              <strong>
-                {heroData.instagram.label}
-              </strong>
+
+            <span
+              className="
+                font-semibold
+
+                text-[var(--color-text)]
+
+                hover:text-[var(--color-accent-blue)]
+                transition-colors
+              "
+            >
+              {heroData.instagram.label}
+            </span>
           </a>
 
           <div className="mt-6">
@@ -111,11 +125,18 @@ export function Hero() {
             <div
               className="
                 flex
-                items-center
-                justify-between
-                gap-4
-                flex-wrap
-                mb-4
+                flex-col
+
+                md:flex-row
+
+                md:items-center
+                md:justify-between
+
+                items-start
+
+                gap-3
+
+                mb-5
               "
             >
               <div>
@@ -138,7 +159,13 @@ export function Hero() {
                 </h3>
               </div>
 
-              <span className="pill text-sm">
+              <span className="
+                  pill
+
+                  text-sm
+
+                  self-start
+                  md:self-auto">
                 {t.hero.nextStepDate}
               </span>
             </div>

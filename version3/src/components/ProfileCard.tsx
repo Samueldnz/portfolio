@@ -40,7 +40,9 @@ export function ProfileCard({
       />
 
       <div>
-        <h3 className="font-bold text-lg">
+        <h3 className="text-lg
+          font-semibold
+          tracking-tight">
           {name}
         </h3>
 
