@@ -136,137 +136,156 @@ export function ExpenseItem({
 
       {/* Mobile Layout */}
 
+      {/* Mobile Layout */}
+
       <div
         className="
-          mt-6
+          mt-5
 
-          grid
-          gap-3
-
+          flex
           md:hidden
+
+          flex-col
+
+          rounded-2xl
+
+          border
+          border-black/5
+          dark:border-white/8
+
+          bg-black/[0.02]
+          dark:bg-white/[0.03]
+
+          overflow-hidden
         "
       >
         {/* Value */}
 
         <div
           className="
-            rounded-xl
+            flex
+            items-center
+            gap-4
 
-            bg-slate-50
-            dark:bg-white/[0.04]
-
-            border
-            border-black/5
-            dark:border-white/5
-
-            p-4
+            px-4
+            py-4
           "
         >
-          <div className="flex items-center gap-3">
-            <div
+          <div
+            className="
+              flex
+              items-center
+              justify-center
+
+              w-10
+              h-10
+
+              rounded-full
+
+              bg-[var(--color-accent-blue)]/10
+
+              shrink-0
+            "
+          >
+            <BadgeDollarSign
+              size={18}
+              className="text-[var(--color-accent-blue)]"
+            />
+          </div>
+
+          <div className="min-w-0">
+            <p
               className="
-                flex
-                items-center
-                justify-center
+                text-[10px]
+                uppercase
+                tracking-[0.18em]
 
-                w-10
-                h-10
-
-                rounded-full
-
-                bg-[var(--color-accent-blue)]/10
+                text-[var(--color-muted)]
               "
             >
-              <BadgeDollarSign
-                size={18}
-                className="text-[var(--color-accent-blue)]"
-              />
-            </div>
+              {t.expenses.value}
+            </p>
 
-            <div>
-              <p
-                className="
-                  text-xs
-                  uppercase
-                  tracking-wide
-                  text-[var(--color-muted)]
-                "
-              >
-                {t.expenses.value}
-              </p>
+            <p
+              className="
+                mt-1
 
-              <p
-                className="
-                  mt-1
-                  text-xl
-                  font-semibold
-                "
-              >
-                {formatCurrency(value)}
-              </p>
-            </div>
+                text-xl
+                font-semibold
+                tracking-tight
+              "
+            >
+              {formatCurrency(value)}
+            </p>
           </div>
         </div>
+
+        <div
+          className="
+            h-px
+
+            bg-black/5
+            dark:bg-white/8
+          "
+        />
 
         {/* Due Date */}
 
         <div
           className="
-            rounded-xl
+            flex
+            items-center
+            gap-4
 
-            bg-slate-50
-            dark:bg-white/[0.04]
-
-            border
-            border-black/5
-            dark:border-white/5
-
-            p-4
+            px-4
+            py-4
           "
         >
-          <div className="flex items-center gap-3">
-            <div
+          <div
+            className="
+              flex
+              items-center
+              justify-center
+
+              w-10
+              h-10
+
+              rounded-full
+
+              bg-[var(--color-accent-blue)]/10
+
+              shrink-0
+            "
+          >
+            <CalendarClock
+              size={18}
+              className="text-[var(--color-accent-blue)]"
+            />
+          </div>
+
+          <div>
+            <p
               className="
-                flex
-                items-center
-                justify-center
+                text-[10px]
+                uppercase
+                tracking-[0.18em]
 
-                w-10
-                h-10
-
-                rounded-full
-
-                bg-[var(--color-accent-blue)]/10
+                text-[var(--color-muted)]
               "
             >
-              <CalendarClock
-                size={18}
-                className="text-[var(--color-accent-blue)]"
-              />
-            </div>
+              {t.expenses.duedata}
+            </p>
 
-            <div>
-              <p
-                className="
-                  text-xs
-                  uppercase
-                  tracking-wide
-                  text-[var(--color-muted)]
-                "
-              >
-                {t.expenses.duedata}
-              </p>
+            <p
+              className="
+                mt-1
 
-              <p
-                className="
-                  mt-1
-                  text-lg
-                  font-medium
-                "
-              >
-                {date}
-              </p>
-            </div>
+                text-lg
+                font-medium
+              "
+            >
+              {date}
+            </p>
           </div>
         </div>
       </div>

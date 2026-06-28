@@ -35,7 +35,7 @@ export function ExpenseTimeline() {
 
   return (
     <div className="mt-16">
-      <div className="mb-8">
+      <div className="mb-6 md:mb-8">
         <span className="pill">
           {t.expenses.timeline.subtitle}
         </span>
@@ -43,8 +43,11 @@ export function ExpenseTimeline() {
         <h3
           className="
             mt-4
-            text-3xl
+
+            text-[2.2rem]
             md:text-4xl
+
+            leading-[1.05]
 
             font-playfair
             font-[600]

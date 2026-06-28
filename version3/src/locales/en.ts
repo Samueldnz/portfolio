@@ -201,7 +201,7 @@ export const en = {
     },
 
     timeline: {
-      title: "Payment Schedule",
+      title: "Monthly Payments",
       subtitle: "Financial Timeline",
       launches: "entries",
 

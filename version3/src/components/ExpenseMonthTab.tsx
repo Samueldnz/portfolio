@@ -13,8 +13,14 @@ export function ExpenseMonthTab({
     <button
       onClick={onClick}
       className={`
-        px-4
+        px-3.5
+        md:px-4
+
         py-2
+        md:py-2.5
+
+        text-sm
+        md:text-base
 
         rounded-full
 
@@ -24,18 +30,20 @@ export function ExpenseMonthTab({
 
         ${
           active
-          ? `
-              bg-[var(--color-accent-blue)]/10
-              text-[var(--color-accent-blue)]
-              border
-              border-[var(--color-accent-blue)]/20
-            `
-          : `
-              bg-[var(--color-paper)]
-              text-[var(--color-muted)]
-              border
-              border-transparent
-            `
+            ? `
+                bg-[var(--color-accent-blue)]/10
+                text-[var(--color-accent-blue)]
+
+                border
+                border-[var(--color-accent-blue)]/20
+              `
+            : `
+                bg-[var(--color-paper)]
+                text-[var(--color-muted)]
+
+                border
+                border-transparent
+              `
         }
       `}
     >

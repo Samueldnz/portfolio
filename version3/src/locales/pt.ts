@@ -205,7 +205,7 @@ export const pt = {
     },
 
     timeline: {
-      title: "Cronograma de Pagamentos",
+      title: "Pagamentos Mensais",
       subtitle: "Linha do tempo financeira",
       launches: "lançamentos",
 
