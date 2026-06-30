@@ -3,6 +3,9 @@ import { useState } from "react";
 
 import { useLanguage } from "../hooks/useLanguage";
 
+import czechFlag from "../assets/flags/cz.svg";
+import italyFlag from "../assets/flags/it.svg";
+
 interface HeroGalleryProps {
   badge: {
     title: string;
@@ -151,17 +154,31 @@ export function HeroGallery({
 
         {!flipped ? (
           <div>
-            <p
+            <div
               className="
-                text-[10px]
-                uppercase
-                tracking-[0.2em]
-                text-slate-500
-                dark:text-slate-300
+                flex
+                items-center
+                gap-2
               "
             >
-              🇨🇿 {t.hero.czechRepublic}
-            </p>
+              <img
+                src={czechFlag}
+                alt="Czech Republic"
+                className="w-4 h-3 rounded-[2px]"
+              />
+
+              <p
+                className="
+                  text-[10px]
+                  uppercase
+                  tracking-[0.2em]
+                  text-slate-500
+                  dark:text-slate-300
+                "
+              >
+                {t.hero.czechRepublic}
+              </p>
+            </div>
 
             <h3
               className="
@@ -230,16 +247,31 @@ export function HeroGallery({
           </div>
         ) : (
           <div>
-            <p
+            <div
               className="
-                text-[10px]
-                uppercase
-                tracking-[0.2em]
-                text-[var(--color-muted)]
+                flex
+                items-center
+                gap-2
               "
             >
-              🇮🇹 {t.hero.italy}
-            </p>
+              <img
+                src={italyFlag}
+                alt="Czech Republic"
+                className="w-4 h-3 rounded-[2px]"
+              />
+
+              <p
+                className="
+                  text-[10px]
+                  uppercase
+                  tracking-[0.2em]
+                  text-slate-500
+                  dark:text-slate-300
+                "
+              >
+                {t.hero.italy}
+              </p>
+            </div>
 
             <h3
               className="

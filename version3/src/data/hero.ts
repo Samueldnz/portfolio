@@ -1,6 +1,6 @@
-import samuelImage from "../assets/samuel.jpg"
 import samuelProfile from "../assets/avatar.jpg"
-import avatarPhoto from "../assets/avatar-samuel.png"
+import frontImage from "../assets/tul.jpeg"
+import backImage from "../assets/cuoa.jpg"
 
 
 export const heroData = {
@@ -21,7 +21,7 @@ export const heroData = {
   },
 
   badge: {
-    frontImage: samuelImage,
-    backImage: avatarPhoto,
+    frontImage: frontImage,
+    backImage: backImage,
   },
 };

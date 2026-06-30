@@ -201,7 +201,7 @@ export const pt = {
     status: {
       completed: "Concluído",
       inProgress: "Em andamento",
-      awaiting: "Aguardando apoio",
+      awaiting: "Aguardando",
     },
 
     timeline: {
@@ -214,10 +214,10 @@ export const pt = {
     },
 
     categories: {
-      cuoa: "Curso / Matrícula (CUOA)",
+      cuoa: "Curso (CUOA)",
 
       liberec:
-        "Pesquisa / Matrícula (Liberec)",
+        "Pesquisa (Liberec)",
 
       airfare:
         "Passagem Aérea",
@@ -226,7 +226,7 @@ export const pt = {
         "Hospedagem",
 
       foodTransport:
-        "Alimentação & Transporte",
+        "Gastos Diários",
 
       insurance:
         "Seguro e Taxas",

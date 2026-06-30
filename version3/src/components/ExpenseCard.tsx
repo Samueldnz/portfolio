@@ -3,6 +3,12 @@ import { motion } from "framer-motion";
 import { formatCurrency } from "../utils/currency";
 import { useLanguage } from "../hooks/useLanguage";
 
+import {
+  Check,
+  Clock3,
+  CircleDashed,
+} from "lucide-react";
+
 interface ExpenseCardProps {
   titleKey: string;
   paid: number;
@@ -45,7 +51,7 @@ export function ExpenseCard({
       <div
         className="
           flex
-          items-start
+          items-center
           justify-between
           gap-4
         "
@@ -65,13 +71,22 @@ export function ExpenseCard({
 
         <span
           className={`
+            inline-flex
+            items-center
+            gap-1.5
+
+            shrink-0
+
             px-3
-            py-1
+            py-1.5
 
             rounded-full
 
-            text-xs
-            font-semibold
+            text-[13px]
+            font-medium
+            leading-none
+
+            whitespace-nowrap
 
             ${
               completed
@@ -82,13 +97,32 @@ export function ExpenseCard({
             }
           `}
         >
-          {
-            completed
-              ? `✓ ${t.expenses.status.completed}`
-              : inProgress
-                ? `◐ ${t.expenses.status.inProgress}`
-                : `○ ${t.expenses.status.awaiting}`
-          }
+          {completed && (
+            <Check
+              size={13}
+              strokeWidth={2.5}
+            />
+          )}
+
+          {inProgress && (
+            <Clock3
+              size={13}
+              strokeWidth={2.5}
+            />
+          )}
+
+          {!completed && !inProgress && (
+            <CircleDashed
+              size={13}
+              strokeWidth={2.5}
+            />
+          )}
+
+          {completed
+            ? t.expenses.status.completed
+            : inProgress
+              ? t.expenses.status.inProgress
+              : t.expenses.status.awaiting}
         </span>
       </div>
 

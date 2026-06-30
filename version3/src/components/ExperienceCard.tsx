@@ -1,6 +1,15 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "../hooks/useLanguage";
 
+import czechFlag from "../assets/flags/cz.svg";
+import italyFlag from "../assets/flags/it.svg";
+
+import {
+  Check,
+  Clock3,
+  CircleDashed,
+} from "lucide-react";
+
 interface ExperienceInstitution {
   country: string;
   flag: string;
@@ -22,6 +31,12 @@ interface ExperienceInstitution {
 interface ExperienceCardProps {
   institution: ExperienceInstitution;
 }
+
+const countryFlags: Record<string, string> = {
+  "Czech Republic": czechFlag,
+  "Italy": italyFlag,
+};
+
 
 export function ExperienceCard({
   institution,
@@ -72,13 +87,26 @@ export function ExperienceCard({
           className="
             flex
             items-center
-            gap-2
+            gap-2.5
             mb-2
           "
         >
-          <span className="text-xl">
-            {institution.flag}
-          </span>
+          <img
+            src={countryFlags[institution.country]}
+            alt={institution.country}
+            className="
+              w-5
+              h-auto
+
+              rounded-[2px]
+
+              object-cover
+
+              shadow-sm
+
+              shrink-0
+            "
+          />
 
           <span
             className="
@@ -172,6 +200,9 @@ export function ExperienceCard({
           flex
           items-center
           justify-between
+
+          gap-4
+          flex-wrap
         "
       >
         <span
@@ -185,13 +216,17 @@ export function ExperienceCard({
 
         <span
           className={`
-            px-3
+            inline-flex
+            items-center
+            gap-1.5
+
+            px-2.5
             py-1
 
             rounded-full
 
-            text-xs
-            font-semibold
+            text-[13px]
+            font-medium
 
             ${
               status === "completed"
@@ -202,12 +237,24 @@ export function ExperienceCard({
             }
           `}
         >
+          {status === "completed" && (
+            <Check size={13} strokeWidth={2.5} />
+          )}
+
+          {status === "active" && (
+            <Clock3 size={13} strokeWidth={2.5} />
+          )}
+
+          {status === "preparing" && (
+            <CircleDashed size={13} strokeWidth={2.5} />
+          )}
+
           {
             status === "completed"
-              ? `✓ ${t.experience.status.completed}`
+              ? t.experience.status.completed
               : status === "active"
-                ? `● ${t.experience.status.active}`
-                : `◌ ${t.experience.status.preparing}`
+                ? t.experience.status.active
+                : t.experience.status.preparing
           }
         </span>
       </div>

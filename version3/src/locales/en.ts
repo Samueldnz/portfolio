@@ -197,7 +197,7 @@ export const en = {
     status: {
       completed: "Completed",
       inProgress: "In Progress",
-      awaiting: "Awaiting Funding",
+      awaiting: "Awaiting",
     },
 
     timeline: {
@@ -209,10 +209,10 @@ export const en = {
       planned: "Planned",
     },
     categories: {
-      cuoa: "CUOA Program & Tuition",
+      cuoa: "CUOA Program",
 
       liberec:
-        "Research Program & Tuition",
+        "Research (Liberec)",
 
       airfare:
         "Airfare",
@@ -221,7 +221,7 @@ export const en = {
         "Accommodation",
 
       foodTransport:
-        "Food & Transportation",
+        "Daily Expenses",
 
       insurance:
         "Insurance & Fees",
