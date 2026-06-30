@@ -368,20 +368,33 @@ export function Navbar() {
               {/* NAVIGATION */}
 
               {navItems.map((item) => (
-                <a
+                <button
                   key={item.id}
-                  href={`#${item.id}`}
-                  onClick={() =>
-                    setIsMobileOpen(false)
-                  }
+                  type="button"
+                  onClick={() => {
+                    setIsMobileOpen(false);
+
+                    setTimeout(() => {
+                      document
+                        .getElementById(item.id)
+                        ?.scrollIntoView({
+                          behavior: "smooth",
+                          block: "start",
+                        });
+                    }, 300); // mesmo tempo da animação
+                  }}
                   className="
+                    w-full
+
+                    text-left
                     text-lg
                     font-semibold
+
                     text-[var(--color-text)]
                   "
                 >
                   {item.label}
-                </a>
+                </button>
               ))}
 
               {/* SETTINGS */}
