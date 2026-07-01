@@ -1,18 +1,22 @@
 import { CampaignProgress } from "../../components/CampaignProgress";
 import { ExpenseCard } from "../../components/ExpenseCard";
 import { ExpenseTimeline } from "../../components/ExpenseTimeline";
-import { expenseCategories } from "../../data/expenses";
+
+import { calculateExpenseCategories } from "../../utils/calculateExpenseCategories";
 
 export function Expenses() {
 
+  const categories =
+    calculateExpenseCategories();
+
   const totalPaid =
-    expenseCategories.reduce(
+    categories.reduce(
       (sum, item) => sum + item.paid,
       0
     );
 
   const totalGoal =
-    expenseCategories.reduce(
+    categories.reduce(
       (sum, item) => sum + item.total,
       0
     );
@@ -45,14 +49,12 @@ export function Expenses() {
             gap-6
           "
         >
-          {expenseCategories.map(
-            (expense) => (
-              <ExpenseCard
-                key={expense.id}
-                {...expense}
-              />
-            )
-          )}
+          {categories.map((expense) => (
+            <ExpenseCard
+              key={expense.id}
+              {...expense}
+            />
+          ))}
         </div>
 
         <ExpenseTimeline />

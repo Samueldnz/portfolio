@@ -8,18 +8,17 @@ import { useLanguage } from "../hooks/useLanguage";
 import {
   monthlyExpenses,
   type MonthKey,
-} from "../data/expenses";
+} from "../data/monthlyExpenses";
 
 export function ExpenseTimeline() {
-
   const { t } = useLanguage();
 
-  const months = Object.entries(
-    monthlyExpenses
-    ) as [MonthKey, (typeof monthlyExpenses)[MonthKey]][];
+  const months = Object.entries(monthlyExpenses);
 
-    const [activeMonth, setActiveMonth] =
-    useState<MonthKey>(months[0][0]);
+  const [activeMonth, setActiveMonth] =
+    useState<MonthKey>(
+      months[0][0] as MonthKey
+    );
 
   const activeData =
     monthlyExpenses[activeMonth];
@@ -88,7 +87,7 @@ export function ExpenseTimeline() {
             }
             active={activeMonth === key}
             onClick={() =>
-              setActiveMonth(key)
+              setActiveMonth(key as MonthKey)
             }
           />
         ))}
@@ -156,7 +155,8 @@ export function ExpenseTimeline() {
             </h4>
           </div>
 
-          <div className="
+          <div
+            className="
               px-4
               py-2
 
@@ -168,7 +168,8 @@ export function ExpenseTimeline() {
 
               text-sm
               font-medium
-            ">
+            "
+          >
             {activeData.items.length}{" "}
             {t.expenses.timeline.launches}
           </div>
@@ -183,7 +184,6 @@ export function ExpenseTimeline() {
             space-y-4
           "
         >
-
           <div
             className="
               absolute
@@ -197,6 +197,7 @@ export function ExpenseTimeline() {
               bg-[var(--color-accent-blue)]/15
             "
           />
+
           {activeData.items.map(
             (expense, index) => (
               <ExpenseItem

@@ -251,6 +251,10 @@ export const en = {
 
       flightMadBra:
         "MAD → BRA Flights",
+      
+      insurance: "Health Insurance",
+
+      daily: "Daily Expenses"
     },
 
     months: {
@@ -262,7 +266,10 @@ export const en = {
       abr26: "April 2026",
       mai26: "May 2026",
       jun26: "June 2026",
-      jul26: "July 2026"
+      jul26: "July 2026",
+      ago26: "August 2026",
+      set26: "September 2026",
+      out26: "October 2026"
     },
 
     installment: "Installment",

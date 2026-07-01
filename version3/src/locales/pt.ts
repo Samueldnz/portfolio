@@ -256,6 +256,10 @@ export const pt = {
 
       flightMadBra:
         "Passagens MAD - BRA",
+
+      insurance: "Seguro de Saúde",
+
+      daily: "Gastos Mensais"
     },
 
     months: {
@@ -268,6 +272,9 @@ export const pt = {
       mai26: "Maio 2026",
       jun26: "Junho 2026",
       jul26: "Julho 2026",
+      ago26: "Agosto 2026",
+      set26: "Setembro 2026",
+      out26: "Outubro 2026"
     },
 
     installment: "Parcela",
